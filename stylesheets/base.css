@@ -289,9 +289,11 @@
 .highlight{
 	font-size: 13px;
 	padding: 10px;
-	background: #f3f6f8;
+	background: #f5f7f9;
 	border: 1px solid #e8eef2;
 	margin-bottom: 15px;
+	-webkit-box-shadow: 0 1px 3px 0 #eee;
+	-webkit-border-radius: 3px;
 }
 
 .title{
