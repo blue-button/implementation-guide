@@ -102,8 +102,8 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
-	a:hover, a:focus { color: #000; }
+	a, a:visited { color: #333; text-decoration: none; outline: 0; }
+	a:hover, a:focus { color: #447DAC; }
 	p a, p a:visited { line-height: inherit; }
 
 
@@ -282,3 +282,18 @@
 	font-size: 28px; line-height: 34px; margin-bottom: 8px; 
 }
 
+.documentation h2{
+	font-size: 20px; line-height: 34px; margin-bottom: 8px; 
+}
+
+.highlight{
+	font-size: 13px;
+	padding: 10px;
+	background: #f3f6f8;
+	border: 1px solid #e8eef2;
+	margin-bottom: 15px;
+}
+
+.title{
+	color:#447DAC;
+}
