@@ -13,7 +13,7 @@ Using Skeleton for Responsive Layout
 
 Example of Code:
 
-```javascript
+{% highlight javascript %}
 "diagnosis":[
 {
    "name":"Name of Condition",
@@ -28,4 +28,4 @@ Example of Code:
    "code":5854
 }
 ]
-```
+{% endhighlight %}
