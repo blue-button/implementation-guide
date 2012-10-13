@@ -5,11 +5,11 @@ title: Blue Button Implementation Guide
 
 # Section Title
 
-Using Skeleton for Responsive Layout
+Mauris vel justo et neque tincidunt fermentum volutpat eget odio. Sed ornare scelerisque neque, nec venenatis nisl pulvinar non.
 
-- **A Responsive Grid Down To Mobile:** Elegant scaling from a browser to tablets to mobile.
-- **Fast to Start:** It's a tool for rapid development with best practices
-- **Style Agnostic:** It provides the most basic, beautiful styles, but is meant to be overwritten.
+- **Great Idea 1:** Proin ac cursus urna. Quisque ut aliquet ipsum. 
+- **Great Idea 2:** Etiam fringilla ante eget arcu faucibus et euismod lacus hendrerit.
+- **Great Idea 3:** Nulla cursus, mi sit amet placerat facilisis.
 
 ## Level Two Header
 
