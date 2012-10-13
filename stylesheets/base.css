@@ -87,8 +87,8 @@
 	strong { font-weight: bold; color: #333; }
 	small { font-size: 80%; }
 
-	code { font-family: "Anonymous Pro", sans-serif; }
-	pre { font-family: "Anonymous Pro", sans-serif; }
+	code { font-family: "Droid Sans Mono", sans-serif; }
+	pre { font-family: "Droid Sans Mono", sans-serif; }
 
 /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
