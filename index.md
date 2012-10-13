@@ -13,25 +13,46 @@ Using Skeleton for Responsive Layout
 
 Example of Code:
 
-{% highlight javascript %}
-"diagnosis":[
+{% highlight json %}
 {
-   "name":"Name of Condition",
-   "codeSystemName":"CPT",
-   "codeSystem":"2.16.840.1.113883.6.96",
-   "code":28521
-},
-{
-   "name":"Name of Condition",
-   "codeSystemName":"CPT",
-   "codeSystem":"2.16.840.1.113883.6.96",
-   "code":5854
+	"diagnosis":[
+	{
+	   "name":"Name of Condition",
+	   "codeSystemName":"CPT",
+	   "codeSystem":"2.16.840.1.113883.6.96",
+	   "code":28521
+	},
+	{
+	   "name":"Name of Condition",
+	   "codeSystemName":"CPT",
+	   "codeSystem":"2.16.840.1.113883.6.96",
+	   "code":5854
+	}
+	]
 }
-]
 {% endhighlight %}
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
+More Code:
+
+{% highlight json %}
+{
+	"patient": {    
+	    "demographics": {
+	        "firstName": "David",
+	        "middleName": null,
+	        "lastName": "Yun",
+	        "age": 38,
+	        "gender": "Male",
+	        "bloodType": "AB",
+	        "organDonor": "Yes"
+	    },
+	    "address": {
+	        "street": "123 Anywhere Road",
+	        "city": "San Francisco",
+	        "state": "CA",
+	        "country": "United States",
+	        "zipCode": 94103
+	    }
+    }
+}
+{% endhighlight %}
