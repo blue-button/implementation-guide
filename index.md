@@ -3,7 +3,7 @@ layout: default
 title: Blue Button Implementation Guide
 ---
 
-# Section Title
+# Getting Started with Blue Button
 
 Mauris vel justo et neque tincidunt fermentum volutpat eget odio. Sed ornare scelerisque neque, nec venenatis nisl pulvinar non.
 

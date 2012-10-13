@@ -296,6 +296,6 @@
 	-webkit-border-radius: 3px;
 }
 
-.title{
+.title, .title a{
 	color:#447DAC;
 }
