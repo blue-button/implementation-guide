@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Best Practices for Recieve Health Data</title>
+	<title>Receiving Health Data Using the Direct Protocol</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -68,9 +68,9 @@
 		<a href="transmit-using-direct.html">Using Direct</a> </br> 
 		<a href="transmit-using-email.html">Using Email</a>
 	</p>
-	<h5><a href="recieve.html">Recieve</a></h5>
+	<h5><a href="receive.html">Receive</a></h5>
 	<p>
-		<a href="recieve-using-direct.html">Using Direct</a>
+		<a href="receive-using-direct.html">Using Direct</a>
 	</p>
 	<h5><a href="#">Tutorial</a></h5>
 	<p>
@@ -81,9 +81,33 @@
 
 		<div class="thirteen columns documentation">
 
-		<h1 id='best_practices_for_recieve_health_data'>Best Practices for Recieve Health Data</h1>
+		<h1 id='receiving_health_data_using_the_direct_protocol'>Receiving Health Data Using the Direct Protocol</h1>
 
-<p>Mauris vel justo et neque tincidunt fermentum volutpat eget odio. Sed ornare scelerisque neque, nec venenatis nisl pulvinar non.</p>
+<p>Two sentences on this concept and how it relates to developers.</p>
+
+<h2 id='workflow'>Workflow</h2>
+
+<p>Patient has transmitted their health data to Direct Address that is tied to your application. Application does wonderful things with it.</p>
+
+<p>Automation - Things will be sent when stuff changes. Be prepared.</p>
+
+<h2 id='technical'>Technical</h2>
+
+<p>You need to setup a HISP. You need to make your certificate publicly accessible. You need to register with a &#8220;whitelist&#8221; provider. You need to then give addresses to your users. Now when you receive messages to those addresses, you do something special with it on-behalf of your user. Your system will know what type of file it is by doing ZZZ.</p>
+
+<p>If the consumer has setup &#8220;automation&#8221;, expect to receive messages continually. Your system needs to handle this case.</p>
+
+<p>If you receive a message that is directed to an unknown address, reject it.</p>
+
+<h2 id='privacy__security'>Privacy &amp; Security</h2>
+
+<h2 id='faq'>FAQ</h2>
+
+<ol>
+<li>How do I get a certificate for my application?</li>
+
+<li>How do I get listed in the trusted whitelist?</li>
+</ol>
 
 		</div>
 	</div><!-- container -->

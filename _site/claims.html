@@ -68,9 +68,9 @@
 		<a href="transmit-using-direct.html">Using Direct</a> </br> 
 		<a href="transmit-using-email.html">Using Email</a>
 	</p>
-	<h5><a href="recieve.html">Recieve</a></h5>
+	<h5><a href="receive.html">Receive</a></h5>
 	<p>
-		<a href="recieve-using-direct.html">Using Direct</a>
+		<a href="receive-using-direct.html">Using Direct</a>
 	</p>
 	<h5><a href="#">Tutorial</a></h5>
 	<p>
@@ -83,7 +83,79 @@
 
 		<h1 id='content_format_for_medical_claims'>Content Format for Medical Claims</h1>
 
-<p>Mauris vel justo et neque tincidunt fermentum volutpat eget odio. Sed ornare scelerisque neque, nec venenatis nisl pulvinar non.</p>
+<p>Two sentences on claims data. Claims standard to be specified.</p>
+
+<h2 id='technical'>Technical</h2>
+
+<p>What are the requirements for medical claims? How do we describe the format?</p>
+
+<p>Example:</p>
+<div class='highlight'><pre><code class='json'><span class='p'>{</span>
+   <span class='nt'>&quot;patient&quot;</span><span class='p'>:{</span>
+      <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Ellen Lu&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;patientIdentifier&quot;</span><span class='p'>:</span><span class='s2'>&quot;W1234123456&quot;</span>
+   <span class='p'>},</span>
+   <span class='nt'>&quot;insurance&quot;</span><span class='p'>:{</span>
+      <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Insurance&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;payerID&quot;</span><span class='p'>:</span><span class='mi'>123456</span><span class='p'>,</span>
+      <span class='nt'>&quot;payerIDType&quot;</span><span class='p'>:</span><span class='s2'>&quot;National Payer ID&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;policyName&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Policy&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;policyInformation&quot;</span><span class='p'>:</span><span class='mi'>123456</span><span class='p'>,</span>
+      <span class='nt'>&quot;memberID&quot;</span><span class='p'>:</span><span class='s2'>&quot;W1234123456&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;memberName&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Plan Member&quot;</span><span class='p'>,</span>
+      <span class='nt'>&quot;planName&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Plan&quot;</span>
+   <span class='p'>},</span>
+   <span class='nt'>&quot;claims&quot;</span><span class='p'>:[</span>
+      <span class='p'>{</span>
+         <span class='nt'>&quot;claim&quot;</span><span class='p'>:</span><span class='s2'>&quot;0210336239290&quot;</span><span class='p'>,</span>
+         <span class='nt'>&quot;type&quot;</span><span class='p'>:</span><span class='s2'>&quot;PartB&quot;</span><span class='p'>,</span>
+         <span class='nt'>&quot;provider&quot;</span><span class='p'>:{</span>
+            <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Inova Health Services&quot;</span><span class='p'>,</span>
+            <span class='nt'>&quot;providerID&quot;</span><span class='p'>:</span><span class='mi'>123456789</span><span class='p'>,</span>
+            <span class='nt'>&quot;providerIDType&quot;</span><span class='p'>:</span><span class='s2'>&quot;National Provider ID&quot;</span>
+         <span class='p'>},</span>
+         <span class='nt'>&quot;date&quot;</span><span class='p'>:{</span>
+            <span class='nt'>&quot;lowValue&quot;</span><span class='p'>:</span><span class='mi'>20101102</span><span class='p'>,</span>
+            <span class='nt'>&quot;highValue&quot;</span><span class='p'>:</span><span class='mi'>20101102</span>
+         <span class='p'>},</span>
+         <span class='nt'>&quot;charges&quot;</span><span class='p'>:{</span>
+            <span class='nt'>&quot;priceBilled&quot;</span><span class='p'>:</span><span class='mi'>1022</span><span class='err'>.</span><span class='mi'>50</span><span class='p'>,</span>
+            <span class='nt'>&quot;negotiatedPrice&quot;</span><span class='p'>:</span><span class='mi'>782</span><span class='err'>.</span><span class='mi'>33</span><span class='p'>,</span>
+            <span class='nt'>&quot;insurancePaid&quot;</span><span class='p'>:</span><span class='mi'>625</span><span class='err'>.</span><span class='mi'>86</span><span class='p'>,</span>
+            <span class='nt'>&quot;patientResponsibility&quot;</span><span class='p'>:</span><span class='mi'>156</span><span class='err'>.</span><span class='mi'>47</span>
+         <span class='p'>},</span>
+         <span class='nt'>&quot;service&quot;</span><span class='p'>:{</span>
+            <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Service Provided&quot;</span><span class='p'>,</span>
+            <span class='nt'>&quot;codeSystemName&quot;</span><span class='p'>:</span><span class='s2'>&quot;CPT&quot;</span><span class='p'>,</span>
+            <span class='nt'>&quot;codeSystem&quot;</span><span class='p'>:</span><span class='s2'>&quot;2.16.840.1.113883.6.96&quot;</span><span class='p'>,</span>
+            <span class='nt'>&quot;code&quot;</span><span class='p'>:</span><span class='mi'>28521</span>
+         <span class='p'>},</span>
+         <span class='nt'>&quot;diagnosis&quot;</span><span class='p'>:[</span>
+            <span class='p'>{</span>
+               <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Condition&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;codeSystemName&quot;</span><span class='p'>:</span><span class='s2'>&quot;CPT&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;codeSystem&quot;</span><span class='p'>:</span><span class='s2'>&quot;2.16.840.1.113883.6.96&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;code&quot;</span><span class='p'>:</span><span class='mi'>28521</span>
+            <span class='p'>},</span>
+            <span class='p'>{</span>
+               <span class='nt'>&quot;name&quot;</span><span class='p'>:</span><span class='s2'>&quot;Name of Condition&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;codeSystemName&quot;</span><span class='p'>:</span><span class='s2'>&quot;CPT&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;codeSystem&quot;</span><span class='p'>:</span><span class='s2'>&quot;2.16.840.1.113883.6.96&quot;</span><span class='p'>,</span>
+               <span class='nt'>&quot;code&quot;</span><span class='p'>:</span><span class='mi'>5854</span>
+            <span class='p'>}</span>
+         <span class='p'>]</span>
+      <span class='p'>}</span>
+   <span class='p'>]</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
+<h2 id='workflow'>Workflow</h2>
+
+<p>Refer to Download, Transmit Using Direct, and Transmit Using Email.</p>
+
+<h2 id='security__privacy'>Security &amp; Privacy</h2>
+
+<p>Section not needed.</p>
 
 		</div>
 	</div><!-- container -->
