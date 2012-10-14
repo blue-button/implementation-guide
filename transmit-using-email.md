@@ -9,11 +9,17 @@ Two sentences on sending health data to a unencrypted email address.
 
 ## Workflow
 
+### Patient Portal
+
 Patient Portal - Send via Email
 
 Patient can send it to themselves or someone else.
 
 File is passworded.
+
+### EMR / Provider
+
+Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Enters an email address. Clicks send.
 
 ## Technical
 

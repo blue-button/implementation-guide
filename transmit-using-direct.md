@@ -17,16 +17,20 @@ Patient Logs In. Patient clicks Share. Patient enters Direct address. Check if a
 
 Ability to login and revoke access.
 
+Handling error cases: bad address
+
 ### EMR / Provider Side
 
 Storyboard describing flow.
 
-Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Check if always want to send. Enters a Direct Address. Clicks send.
+Way 1, in-person.
+Way 2, clipboard consent.
+
+Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Check if always want to send. Enters a Direct Address. Clicks send.
 
 Ability to stop sending.
 
-Way 1, in-person.
-Way 2, clipboard consent.
+Handling error cases: bad address
 
 ## Technical
 
