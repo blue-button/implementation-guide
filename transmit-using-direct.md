@@ -26,7 +26,7 @@ Storyboard describing flow.
 Way 1, in-person.
 Way 2, clipboard consent.
 
-Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Check if always want to send. Enters a Direct Address. Clicks send.
+Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Enters a Direct Address. Check if always want to send. Clicks "Add & Send".
 
 Ability to stop sending.
 
