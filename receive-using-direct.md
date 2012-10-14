@@ -11,6 +11,8 @@ Two sentences on this concept and how it relates to developers.
 
 Patient has transmitted their health data to Direct Address that is tied to your application. Application does wonderful things with it.
 
+Automation - Things will be sent when stuff changes. Be prepared.
+
 ## Technical
 
 You need to setup a HISP.
@@ -19,6 +21,8 @@ You need to register with a "whitelist" provider.
 You need to then give addresses to your users.
 Now when you receive messages to those addresses, you do something special with it on-behalf of your user.
 Your system will know what type of file it is by doing ZZZ.
+
+If the consumer has setup "automation", expect to receive messages continually. Your system needs to handle this case.
 
 If you receive a message that is directed to an unknown address, reject it.
 
