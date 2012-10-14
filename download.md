@@ -1,15 +1,11 @@
 ---
 layout: default
-title: Best Practices for Downloading Data
+title: Enabling the Download of Health Data
 ---
 
-# Best Practices for Downloading Data
+# Enabling the Download of Health Data
 
 Two sentences on why downloading data is important.
-
-## Technical
-
-Ability to download content files directly to computer or device.
 
 ## Workflow
 
@@ -17,6 +13,10 @@ Consumer logs into Patient Portal - Download Button
 
 Optional:
 Consumer logs into Patient Portal - Selects Sections & Date Ranges - Download Button
+
+## Technical
+
+Ability to download content files directly to computer or device.
 
 ## Privacy & Security
 

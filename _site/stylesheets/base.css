@@ -283,8 +283,13 @@
 }
 
 .documentation h2{
-	font-size: 20px; line-height: 34px; margin-bottom: 8px; 
+	font-size: 20px; line-height: 22px; margin-bottom: 8px; 
 }
+
+.documentation h3{
+	font-size: 16px; line-height: 16px; margin-bottom: 4px; 
+}
+
 
 .highlight{
 	font-size: 13px;
