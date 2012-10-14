@@ -62,6 +62,12 @@ Sending frequency. Triggers.
 
 ## Privacy & Security
 
-Guidance - It's okay to use Direct to send to a Direct address using a certificate publically discovered using DNS. This ensures everything transmitted is encrypted.
+Guidance - It's okay to use publically discoverd certificates to send a Direct message initiated by the consumer. This ensures everything transmitted is encrypted. 
+
+(The certificates do not need to be exchanged.)
+
+A patient should be able to send their files to any Direct address.
+
+Link to Letter/Guidance from ONC/OCR.
 
 Best Practice / Suggestion - Show a lock. Show a signature icon too.
