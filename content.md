@@ -7,5 +7,5 @@ title: Content Format Overview
 
 Describe the different content standards that exist.
 
-- Health Data - CCDA / MU 2 Template
-- Claims Data - ???
+- **Health Data** - CCDA / MU 2 Template
+- **Claims Data** - ???
