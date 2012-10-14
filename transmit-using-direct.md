@@ -10,10 +10,23 @@ Two sentences describing what transmit is. Two sentences describing what the Dir
 ## Workflow
 
 ### Patient Portal
-Patient Logs In. Patient clicks Share. Patient enters Direct address. Patient clicks Send.
 
-### EMR
-Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Enters a Direct Address. Clicks send.
+Storyboard describing flow.
+
+Patient Logs In. Patient clicks Share. Patient enters Direct address. Check if always want to send. Patient clicks Send.
+
+Ability to login and revoke access.
+
+### EMR / Provider Side
+
+Storyboard describing flow.
+
+Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Check if always want to send. Enters a Direct Address. Clicks send.
+
+Ability to stop sending.
+
+Way 1, in-person.
+Way 2, clipboard consent.
 
 ## Technical
 
@@ -31,8 +44,24 @@ Image outlining how it works.
 
 Technical image outlining how it works.
 
+Certificate Exchange
+Pointers to "Trusted" Whitelist.
+Must be able to refer to multiple whitelists.
+Must pull from whitelists at X frequency.
+
+Certificate Discovery - Using DNS and LDAP
+Link to more detailed spec.
+
 Links to Sample Code
 
 Links to Direct Spec
 
+### Automation
+
+Sending frequency. Triggers.
+
 ## Privacy & Security
+
+Guidance - It's okay to use Direct to send to a Direct address using a certificate publically discovered using DNS. This ensures everything transmitted is encrypted.
+
+Best Practice / Suggestion - Show a lock. Show a signature icon too.

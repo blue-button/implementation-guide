@@ -9,6 +9,8 @@ Two sentences on why downloading data is important.
 
 ## Workflow
 
+Storyboard of Workflow.
+
 Consumer logs into Patient Portal - Download Button
 
 Optional:
@@ -17,6 +19,10 @@ Consumer logs into Patient Portal - Selects Sections & Date Ranges - Download Bu
 ## Technical
 
 Ability to download content files directly to computer or device.
+
+CCDA XML + Needs to have stylesheet.
+
+Optional - Add pointer in the header.
 
 ## Privacy & Security
 

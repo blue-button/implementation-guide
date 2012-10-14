@@ -51,7 +51,7 @@
 	<div class="container">
 		<div class="sixteen columns">
 			<h3 class="remove-bottom title" style="margin-top: 40px"><a href="index.html">Blue Button Implementation Guide</a></h3>
-			<h6>October 13, 2012</h6>
+			<h6>October 14, 2012 - Draft</h6>
 			<hr />
 		</div>
 
@@ -89,11 +89,21 @@
 
 <h3 id='patient_portal'>Patient Portal</h3>
 
-<p>Patient Logs In. Patient clicks Share. Patient enters Direct address. Patient clicks Send.</p>
+<p>Storyboard describing flow.</p>
 
-<h3 id='emr'>EMR</h3>
+<p>Patient Logs In. Patient clicks Share. Patient enters Direct address. Check if always want to send. Patient clicks Send.</p>
 
-<p>Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Enters a Direct Address. Clicks send.</p>
+<p>Ability to login and revoke access.</p>
+
+<h3 id='emr__provider_side'>EMR / Provider Side</h3>
+
+<p>Storyboard describing flow.</p>
+
+<p>Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks Share. Check if always want to send. Enters a Direct Address. Clicks send.</p>
+
+<p>Ability to stop sending.</p>
+
+<p>Way 1, in-person. Way 2, clipboard consent.</p>
 
 <h2 id='technical'>Technical</h2>
 
@@ -111,11 +121,23 @@
 
 <p>Technical image outlining how it works.</p>
 
+<p>Certificate Exchange Pointers to &#8220;Trusted&#8221; Whitelist. Must be able to refer to multiple whitelists. Must pull from whitelists at X frequency.</p>
+
+<p>Certificate Discovery - Using DNS and LDAP Link to more detailed spec.</p>
+
 <p>Links to Sample Code</p>
 
 <p>Links to Direct Spec</p>
 
+<h3 id='automation'>Automation</h3>
+
+<p>Sending frequency. Triggers.</p>
+
 <h2 id='privacy__security'>Privacy &amp; Security</h2>
+
+<p>Guidance - It&#8217;s okay to use Direct to send to a Direct address using a certificate publically discovered using DNS. This ensures everything transmitted is encrypted.</p>
+
+<p>Best Practice / Suggestion - Show a lock. Show a signature icon too.</p>
 
 		</div>
 	</div><!-- container -->
