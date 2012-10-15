@@ -13,7 +13,7 @@ Two sentences describing what transmit is. Two sentences describing what the Dir
 
 Storyboard describing flow.
 
-Patient Logs In. Patient clicks Share. Patient enters Direct address. Check if always want to send. Patient clicks Send.
+Patient Logs In. Patient clicks Share w. Direct. Patient enters Direct address. Check if always want to send. Patient clicks Share.
 
 Ability to login and revoke access.
 

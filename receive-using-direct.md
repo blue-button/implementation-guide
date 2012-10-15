@@ -28,6 +28,7 @@ If you receive a message that is directed to an unknown address, reject it.
 
 ## Privacy & Security
 
+What privacy and security guidance do we need to provide?
 
 ## FAQ
 
