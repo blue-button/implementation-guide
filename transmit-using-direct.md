@@ -40,9 +40,9 @@ Handling error cases: bad address
 
 ### Handling a Patient's Request for Transmit
 
-A patient's request for sharing their data will include authorization for transmit and the destination Direct address(es).
+A patient's request for sharing their data will include authorization for transmit, frequency and the destination Direct address(es).
 
-#### Authorization
+#### Authorization and Frequency
 
 An authorization is a patient giving a provider or patient portal permission and instructions to send them their health information via Direct. Blue Button requires systems to enable 2 types of authorizations:
 
