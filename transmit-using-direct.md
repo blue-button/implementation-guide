@@ -5,7 +5,7 @@ title: Transmitting Data Using the Direct Protocol
 
 # Transmitting Data Using the Direct Protocol
 
-Two sentences describing what transmit is. Two sentences describing what the Direct protocol is.
+This functionality enables a dataholder, like an EMR, to send patient health information to a third party. Blue Button recommends that data should be transmitted using the Direct protocol. Direct is a means of sending health information securely from a dataholder to a recipient. For example, recipients can be other provider EMRs and third party applications for patients.
 
 ## Workflow
 
@@ -39,6 +39,8 @@ Handling error cases: bad address
 Should be CCDA/MU-2 for health data. Should be YYY for claims data.
 
 ### Direct Protocol
+
+Direct is not a new protocol, but rather, a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
 The Direct Protocol is used to send health data securely from Point A to Point B.
 
