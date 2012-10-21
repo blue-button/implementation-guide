@@ -43,24 +43,23 @@ Blue Button builds on the requirements from Meaningful Use Stage 2. When ever a 
 	<tr>
 		<td>Sex</td>
 	</tr>
-	</tr>
 </table>
-
-Consolidated CDA - Meaningful Use 2 Template
-
-Discuss Stylesheet to make it human readable.
-
-List the sections in MU 2 Template
 
 Link to Companion Guide to Consolidated CDA.
 
+### Human Readable Stylesheet
+If a patient or other person is the main consumer of the health record, it should include a stylesheet. 
+
+To make the CCDA XML human readable, an XSLT stylesheet should be included. This will allow a person to easily view their information on a computer or print it.
+
+### Sample Health Records
 Link to samples of MU 2 files.
 
-## Privacy & Security
+### Sample Stylesheets
+Link to sample stylesheet
 
-Section not needed.
 
-## FAQ
+## Commonly Asked Questions
 
 1. What is the difference between a CCD/C32 and CCD/CCDA?
 
