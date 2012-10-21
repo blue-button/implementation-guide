@@ -7,6 +7,7 @@ title: Transmitting Data Using the Direct Protocol
 
 This functionality enables a dataholder, like an EMR, to send patient health information to a third party. Blue Button recommends that data should be transmitted using the Direct protocol. Direct is a means of sending health information securely from a dataholder to a recipient. For example, recipients can be other provider EMRs and third party applications for patients.
 
+<!---
 ## Workflow
 
 It is important to enable a patient to transmit their health information from the patient portal and from the provider setting.
@@ -33,6 +34,7 @@ Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record.
 Ability to stop sending.
 
 Handling error cases: bad address
+-->
 
 ## Technical
 
@@ -101,10 +103,10 @@ Best Practice / Suggestion - Show a lock. Show a signature icon too.
 
 Under HIPAA a patient may request a provider to send their information in the form of their choosing. For Blue Button, a provider should give patients a standardize a way of requesting their information.
 
-This authorization can be one of two types: a one time send of information or a permanent authorizations of sending when things change.
-
-the patient the option of receiving their data once or always.
+<!---
 
 Temp Area
 Entire Record
 Package - File List, Grandma
+
+-->
