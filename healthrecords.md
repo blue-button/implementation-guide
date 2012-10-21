@@ -5,7 +5,8 @@ title: Blue Button Implementation Guide
 
 # Content Format for Health Records
 
-An electronic health record keeps a digital record of all clinical information. 
+An electronic health record keeps a digital record of all clinical information. With the amount of variability in clinical IT systems, it is important to have a consistent set of health information for each patient. Meaningful Use specifies the fields and content structure of clinical data that patients need as they move between provider settings.
+
 
 ## Workflow
 
