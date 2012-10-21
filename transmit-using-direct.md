@@ -38,7 +38,9 @@ Handling error cases: bad address
 
 ### Authorization for Transmitting
 
-Blue Button recommends a dataholder's system to be able to handle 2 types of transmits: (1) an authorization to send once and (2) an authorization to send when ever my patient record is updated. See Triggers section to learn more.
+Blue Button recommends a dataholder's system to be able to handle 2 types of transmits: 
+1. An authorization to send once
+2. An authorization to send when ever my patient record is updated (See Triggers section for guidance)
 
 ### Payload
 
