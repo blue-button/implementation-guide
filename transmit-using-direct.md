@@ -36,7 +36,11 @@ Handling error cases: bad address
 
 ## Technical
 
-### Authorization for Transmitting
+### Handling a Patient's Request for Transmit
+
+A patient's request for sharing their data will include authorization for transmit and the destination Direct address(es).
+
+#### Authorization
 
 An authorization is a patient giving a provider or patient portal permission and instructions to send them their health information via Direct. Blue Button requires systems to enable 2 types of authorizations:
 
@@ -45,29 +49,22 @@ An authorization is a patient giving a provider or patient portal permission and
 
 For additional guidance on "updating" see Triggers section.
 
+#### Direct Addresses
 
-Blue Button recommends a dataholder's system to be able to handle 2 types of authorizations: 
-1. To send once
-2. To send when ever my patient record is changed (See Triggers section for guidance)
-
-### Payload
-
-- Clinical Content: Needs to be a CCDA with MU-2 sections and fields.
-- Claims: 
-
-Should be CCDA/MU-2 for health data. Should be YYY for claims data.
+A Direct address looks like name@direct.something.com. For field validation, it follows the form of an email address.
 
 ### Direct Protocol
 
 Direct is not a new protocol, but rather, a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
-The Direct Protocol is used to send health data securely from Point A to Point B.
-
-Description of Direct Protocol
-
 Image outlining how it works.
 
 Technical image outlining how it works.
+
+(1) You have a system
+(2) 
+
+
 
 Certificate Exchange
 Pointers to "Trusted" Whitelist.
@@ -84,6 +81,13 @@ Links to Direct Spec
 ### Automation
 
 Sending frequency. Triggers.
+
+### Payload
+
+- Clinical Content: Needs to be a CCDA with MU-2 sections and fields.
+- Claims: 
+
+Should be CCDA/MU-2 for health data. Should be YYY for claims data. Packaging.
 
 ## Privacy & Security
 
