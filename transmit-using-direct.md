@@ -9,6 +9,8 @@ This functionality enables a dataholder, like an EMR, to send patient health inf
 
 ## Workflow
 
+It is important to enable a patient to transmit their health information from the patient portal and from the provider setting.
+
 ### Patient Portal
 
 Storyboard describing flow.
@@ -19,7 +21,7 @@ Ability to login and revoke access.
 
 Handling error cases: bad address
 
-### EMR / Provider Side
+### Provider Setting (EMR)
 
 Storyboard describing flow.
 
@@ -34,7 +36,14 @@ Handling error cases: bad address
 
 ## Technical
 
+### Authorization for Transmitting
+
+Blue Button recommends a dataholder's system to be able to handle 2 types of transmits: (1) an authorization to send once and (2) an authorization to send when ever my patient record is updated. See Triggers section to learn more.
+
 ### Payload
+
+- Clinical Content: Needs to be a CCDA with MU-2 sections and fields.
+- Claims: 
 
 Should be CCDA/MU-2 for health data. Should be YYY for claims data.
 
@@ -77,6 +86,12 @@ A patient should be able to send their files to any Direct address.
 Link to Letter/Guidance from ONC/OCR.
 
 Best Practice / Suggestion - Show a lock. Show a signature icon too.
+
+Under HIPAA a patient may request a provider to send their information in the form of their choosing. For Blue Button, a provider should give patients a standardize a way of requesting their information.
+
+This authorization can be one of two types: a one time send of information or a permanent authorizations of sending when things change.
+
+the patient the option of receiving their data once or always.
 
 
 Temp Area
