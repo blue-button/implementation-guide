@@ -55,27 +55,26 @@ A Direct address looks like name@direct.something.com. For field validation, it 
 
 ### Direct Protocol
 
-Direct is not a new protocol, but rather, a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
+Direct is a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
-Image outlining how it works.
+As a dataholder, you will need to send patient health information from your system to a Direct address. In order to do that, your system needs to be able to send that payload via SMTP and SMIME through a Health Information Service Provider (HISP). The functionality of a HISP can be internal to your system or hosted externally.
 
-Technical image outlining how it works.
+A HISP is a component that handles Direct message delivery and receipt. For Blue Button, a HISP must be able to:
+- Send messages via SMTP
+- Discover certificates via LDAP and DNS
+- Encrypt using S/MIME
+- Error Cases
 
-(1) You have a system
-(2) Your system needs to talk to a HISP. It should payload and direct address.
-(3) HISP (which you own or you don't) will send it.
+Your system can communicate the payload and destination Direct address to a HISP via SOAP or REST.
 
-Certificate Exchange
-Pointers to "Trusted" Whitelist.
-Must be able to refer to multiple whitelists.
-Must pull from whitelists at X frequency.
+Link to Direct Spec - IE how to build a HISP
+Link to Sample Code - Head start in Java, .NET, etc...
 
-Certificate Discovery - Using DNS and LDAP
-Link to more detailed spec.
+#### Certificate Exchange
+Pulls from a "trusted" White list. Must be able to pull from multiple whitelists. Must pull from whitelists at X frequency.
 
-Links to Sample Code
-
-Links to Direct Spec
+#### Certificate Discovery
+More details on DNS and LDAP. The ability to send to any address that is given to you.
 
 ### Automation
 
@@ -105,7 +104,6 @@ Under HIPAA a patient may request a provider to send their information in the fo
 This authorization can be one of two types: a one time send of information or a permanent authorizations of sending when things change.
 
 the patient the option of receiving their data once or always.
-
 
 Temp Area
 Entire Record
