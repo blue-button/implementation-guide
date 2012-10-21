@@ -5,7 +5,7 @@ title: Blue Button Implementation Guide
 
 # Content Format for Health Records
 
-Two sentences setting that describes the type of health record. Explain what a CCD is.
+An electronic health record keeps a digital record of all clinical information. 
 
 ## Workflow
 
