@@ -13,6 +13,8 @@ For Blue Button, the recommended standard for representing the patient health re
 
 The Consolidated CDA is a XML-based standard that specifies the encoding, structure, and semantics of a clinical document.
 
+There are a wide-range of templates that can be represented in the Consolidated CDA standard. For Blue Button we are outlining a subset set of sections and fields that should be used.
+
 ### Sections and Fields
 Blue Button builds on the requirements from Meaningful Use Stage 2. When ever a patient helath record is generated, it should have the following fields, if they exist in the dataholders system:
 
