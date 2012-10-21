@@ -75,3 +75,8 @@ A patient should be able to send their files to any Direct address.
 Link to Letter/Guidance from ONC/OCR.
 
 Best Practice / Suggestion - Show a lock. Show a signature icon too.
+
+
+Temp Area
+Entire Record
+Package - File List, Grandma
