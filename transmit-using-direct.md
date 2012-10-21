@@ -38,9 +38,17 @@ Handling error cases: bad address
 
 ### Authorization for Transmitting
 
-Blue Button recommends a dataholder's system to be able to handle 2 types of transmits: 
-1. An authorization to send once
-2. An authorization to send when ever my patient record is updated (See Triggers section for guidance)
+An authorization is a patient giving a provider or patient portal permission and instructions to send them their health information via Direct. Blue Button requires systems to enable 2 types of authorizations:
+
+1. A one-time share of health information to a Direct address
+2. A continual share of health information to a Direct address when my patient record is updated
+
+For additional guidance on "updating" see Triggers section.
+
+
+Blue Button recommends a dataholder's system to be able to handle 2 types of authorizations: 
+1. To send once
+2. To send when ever my patient record is changed (See Triggers section for guidance)
 
 ### Payload
 
