@@ -27,11 +27,22 @@ Blue Button builds on the requirements from Meaningful Use Stage 2. When ever a 
 	<tr>
 		<th rowspan="6">Patient Information</th>
 		<td>Date of Birth</td>
+	</tr>
+	<tr>
 		<td>Ethnicity</td>
+	</tr>
+	<tr>
 		<td>Patient Name</td>
+	</tr>
+	<tr>
 		<td>Preferred Language</td>
+	</tr>
+	<tr>
 		<td>Race</td>
+	</tr>
+	<tr>
 		<td>Sex</td>
+	</tr>
 	</tr>
 </table>
 
