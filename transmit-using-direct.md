@@ -62,9 +62,8 @@ Image outlining how it works.
 Technical image outlining how it works.
 
 (1) You have a system
-(2) 
-
-
+(2) Your system needs to talk to a HISP. It should payload and direct address.
+(3) HISP (which you own or you don't) will send it.
 
 Certificate Exchange
 Pointers to "Trusted" Whitelist.
