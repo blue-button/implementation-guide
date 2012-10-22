@@ -9,7 +9,7 @@ An electronic health record keeps a digital record of all clinical information. 
 
 
 ## Technical
-For Blue Button, the recommended standard for representing the patient health record is the HL7 Consolidated Clinical Document Architecure also known as the Consolidated CDA.
+For Blue Button, the recommended standard for representing the patient health record is the HL7 Consolidated Clinical Document Architecture also known as the Consolidated CDA.
 
 The Consolidated CDA is a XML-based standard that specifies the encoding, structure, and semantics of a clinical document.
 
@@ -41,6 +41,103 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	</tr>
 	<tr>
 		<td>Sex</td>
+	</tr>
+	<tr>
+		<th rowspan="1">Care Planning</th>
+		<td>Care plan field(s), including goals and instructions</td>
+	</tr>
+	<tr>
+		<th rowspan="1">Conditions or Concerns</th>
+		<td>Problems</td>
+	</tr>
+	<tr>
+		<th rowspan="2">Medications and Immunizations</th>
+		<td>Medication Allergies</td>
+	</tr>
+	<tr>
+		<td>Medications</td>
+	</tr>
+	<tr>
+		<th rowspan="4">Observations and Results</th>
+		<td>Laboratory Tests</td>
+	</tr>
+	<tr>
+		<td>Laboratory Values(s)/Results(s)</td>
+	</tr>
+	<tr>
+		<td>Smoking Status</td>
+	</tr>
+	<tr>
+		<td>Vital signs (height, weight, BP, BMI)</td>
+	</tr>
+	<tr>
+		<th rowspan="1">Procedures</th>
+		<td>Procedures</td>
+	</tr>
+	<tr>
+		<th rowspan="5">Encounter Information</th>
+		<td>Admission and Discharge Dates</td>
+	</tr>
+	<tr>
+		<td>Admission and Discharge Location</td>
+	</tr>
+	<tr>
+		<td>Date of Visit</td>
+	</tr>
+	<tr>
+		<td>Provider Name and Office Contact Information</td>
+	</tr>	
+	<tr>
+		<td>Visit Location</td>
+	</tr>	
+	<tr>
+		<th rowspan="7">Care Planning</th>
+		<td>Clinical Instructions</td>
+	</tr>
+	<tr>
+		<td>Diagnostic Test(s) Pending</td>
+	</tr>
+	<tr>
+		<td>Discharge Instructions</td>
+	</tr>
+	<tr>
+		<td>Future Scheduled Appointments</td>
+	</tr>	
+	<tr>
+		<td>Future Scheduled Test(s)</td>
+	</tr>
+	<tr>
+		<td>Recommended Patient Decision Aids</td>
+	</tr>	
+	<tr>
+		<td>Referrals to Other Providers</td>
+	</tr>	
+	<tr>
+		<th rowspan="4">Conditions or Concerns</th>
+		<td>Encounter Diagnoses</td>
+	</tr>
+	<tr>
+		<td>Reason for Hospitalization</td>
+	</tr>
+	<tr>
+		<td>Reason for Referral</td>
+	</tr>
+	<tr>
+		<td>Reason for Visit</td>
+	</tr>
+	<tr>
+		<th rowspan="2">Medications and Immunizations</th>
+		<td>Immunizations</td>
+	</tr>
+	<tr>
+		<td>Medications Administered during the Visit</td>
+	</tr>
+	<tr>
+		<th rowspan="2">Observations and Results</th>
+		<td>Cognitive Status</td>
+	</tr>
+	<tr>
+		<td>Functional Status</td>
 	</tr>
 </table>
 
