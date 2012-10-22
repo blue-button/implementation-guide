@@ -102,8 +102,12 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #333; text-decoration: none; outline: 0; }
+	.nav a, .nav a:visited { color: #333; text-decoration: none; outline: 0; }
+	.nav a:hover, .nav a:focus { color: #447DAC; }
+
+	a, a:visited { color: #447DAC; text-decoration: none; outline: 0; }
 	a:hover, a:focus { color: #447DAC; }
+
 	p a, p a:visited { line-height: inherit; }
 
 
@@ -274,6 +278,42 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+
+
+/* #Table Styles
+================================================== */
+table{
+	background: #f5f7f9;
+	border: 1px solid #e8eef2;
+	-webkit-box-shadow: 0 1px 3px 0 #eee;
+	-webkit-border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+tr{
+	border: 1px solid #e8eef2;
+}
+
+tr.odd{
+	background: #f9fbfc;
+}
+
+th{
+	font-weight: bold;
+	text-align: left;
+	padding: 10px;
+}
+
+td{
+	padding: 10px;
+	border-left: 1px solid #e8eef2;
+}
+
+.table-column{
+	border-left: 1px solid #e8eef2;
+	background: #696969;
+	color: #FFF;
+}
 
 
 /* #Override

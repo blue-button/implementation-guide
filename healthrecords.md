@@ -20,33 +20,37 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 
 <table>
 	<tr>
+		<th class="table-column">Category</th>
+		<th class="table-column">Data Elements</th>
+	</tr>
+	<tr>
 		<th rowspan="1">Encounter Information</th>
 		<td>Care Team Members</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th rowspan="6">Patient Information</th>
 		<td>Date of Birth</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Ethnicity</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Patient Name</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Preferred Language</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Race</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Sex</td>
 	</tr>
 	<tr>
 		<th rowspan="1">Care Planning</th>
 		<td>Care plan field(s), including goals and instructions</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th rowspan="1">Conditions or Concerns</th>
 		<td>Problems</td>
 	</tr>
@@ -57,37 +61,37 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	<tr>
 		<td>Medications</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th rowspan="4">Observations and Results</th>
 		<td>Laboratory Tests</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Laboratory Values(s)/Results(s)</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Smoking Status</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Vital signs (height, weight, BP, BMI)</td>
 	</tr>
 	<tr>
 		<th rowspan="1">Procedures</th>
 		<td>Procedures</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th rowspan="5">Encounter Information</th>
 		<td>Admission and Discharge Dates</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Admission and Discharge Location</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Date of Visit</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Provider Name and Office Contact Information</td>
 	</tr>	
-	<tr>
+	<tr class="odd">
 		<td>Visit Location</td>
 	</tr>	
 	<tr>
@@ -112,17 +116,17 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	<tr>
 		<td>Referrals to Other Providers</td>
 	</tr>	
-	<tr>
+	<tr class="odd">
 		<th rowspan="4">Conditions or Concerns</th>
 		<td>Encounter Diagnoses</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Reason for Hospitalization</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Reason for Referral</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Reason for Visit</td>
 	</tr>
 	<tr>
@@ -132,16 +136,16 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	<tr>
 		<td>Medications Administered during the Visit</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th rowspan="2">Observations and Results</th>
 		<td>Cognitive Status</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<td>Functional Status</td>
 	</tr>
 </table>
 
-Link to Companion Guide to Consolidated CDA.
+Link to [Companion Guide to Consolidated CDA](http://wiki.siframework.org/Companion+Guide+to+Consolidated+CDA+for+MU2).
 
 ### Human Readable Stylesheet
 If a patient or other person is the main consumer of the health record, it should include a stylesheet. 
