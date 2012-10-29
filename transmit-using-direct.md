@@ -106,19 +106,19 @@ We have created two sets of storyboards that match the 2 key user flows. The fir
 
 ***1. Patient logs into the patient portal***
 
-![Patient logs in](/images/patient-1.png)
+![Patient logs in](images/patient-1.png)
 
 ***2. Patient clicks on "Share with Direct"***
 
-![Patient clicks share with Direct](/images/patient-2.png)
+![Patient clicks share with Direct](images/patient-2.png)
 
 ***3. Patient reads and accepts transmit terms***
 
-![Patient clicks share with Direct](/images/patient-3.png)
+![Patient clicks share with Direct](images/patient-3.png)
 
 ***4. Patient enters Direct address and selects transmit frequency***
 
-![Patient clicks share with Direct](/images/patient-4.png)
+![Patient clicks share with Direct](images/patient-4.png)
 
 ***5. Patient has successful transmitted their health record***
 
