@@ -95,4 +95,43 @@ Each time a transmission happens, the entire content of a patient's record shoul
 - ***Clinical Content***: [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
 - ***Payer Content***: TBD
 
+The payload will be zipped and packaged using XDR and XDM.
+
+
+## Workflow
+
+We have created two sets of storyboards that match the 2 key user flows. The first is within the patient portal and the second is in the provider's interface. These sketches are just examples of how transmitting using Direct could be implemented.
+
+### Patient Portal
+
+***1. Patient logs into the patient portal***
+
+![Patient logs in](/images/patient-1.png)
+
+***2. Patient clicks on "Share with Direct"***
+
+![Patient clicks share with Direct](/images/patient-2.png)
+
+***3. Patient reads and accepts transmit terms***
+
+![Patient clicks share with Direct](/images/patient-3.png)
+
+***4. Patient enters Direct address and selects transmit frequency***
+
+![Patient clicks share with Direct](/images/patient-4.png)
+
+***5. Patient has successful transmitted their health record***
+
+### Provider Setting (EMR)
+
+Storyboard describing flow.
+
+Way 1, in-person.
+Way 2, clipboard consent.
+
+Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Enters a Direct Address. Check if always want to send. Clicks "Add & Send".
+
+Ability to stop sending.
+
+Handling error cases: bad address
 
