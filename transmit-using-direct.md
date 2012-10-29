@@ -5,108 +5,94 @@ title: Transmitting Data Using the Direct Protocol
 
 # Transmitting Data Using the Direct Protocol
 
-This functionality enables a dataholder, like an EMR, to send patient health information to a third party. Blue Button recommends that data should be transmitted using the Direct protocol. Direct is a means of sending health information securely from a dataholder to a recipient. For example, recipients can be other provider EMRs and third party applications for patients.
+This section describes the use of the [Direct Project](http://directproject.org) specification to transmit health data securely from a ***data holder*** to a ***third party***.
 
-<!---
-## Workflow
-
-It is important to enable a patient to transmit their health information from the patient portal and from the provider setting.
-
-### Patient Portal
-
-Storyboard describing flow.
-
-Patient Logs In. Patient clicks Share w. Direct. Patient enters Direct address. Check if always want to send. Patient clicks Share.
-
-Ability to login and revoke access.
-
-Handling error cases: bad address
-
-### Provider Setting (EMR)
-
-Storyboard describing flow.
-
-Way 1, in-person.
-Way 2, clipboard consent.
-
-Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Enters a Direct Address. Check if always want to send. Clicks "Add & Send".
-
-Ability to stop sending.
-
-Handling error cases: bad address
--->
+Examples of data holder systems include: provider's EHR, health insurance claims database, or pharmacy dispensing system. Examples of third parties include: personal health records, mobile applications, or web services.
 
 ## Technical
 
-### Handling a Patient's Request for Transmit
+### A. Authentication
+A patient's identity must be validated before a transmit can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials. In the case of a live interaction with the patient or their authorized representative, the provider is responsible for "in-person" identity validation.
 
-A patient's request for sharing their data will include authorization for transmit, frequency and the destination Direct address(es).
+These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit. 
 
-#### Authorization and Frequency
+### B. Handling a Patient's Request for Transmit
 
-An authorization is a patient giving a provider or patient portal permission and instructions to send them their health information via Direct. Blue Button requires systems to enable 2 types of authorizations:
+A patient's request for sharing their data will include:
 
-1. A one-time share of health information to a Direct address
-2. A continual share of health information to a Direct address when my patient record is updated
+1. Authorization for transmit
+2. Frequency preferences
+3. Destination Direct address(es) 
 
-For additional guidance on "updating" see Triggers section.
+A system must be able to receive these 3 pieces of information from a patient before transmitting their information. These pieces of information may be received via a patient portal or via a provider interface. The patient must also have the ability to revoke a transmit request.
 
-#### Direct Addresses
+#### 1. Authorization 
+Patient access to the patient's health record is a right under HIPAA. However, the provider may reasonably wish to ensure that the patient understands and accepts the resulting action and risks inherent in transmit.
 
-A Direct address looks like name@direct.something.com. For field validation, it follows the form of an email address.
+The system should display consent messaging, including all necessary legal language, to the patient or to the provider on the patient's behalf. The user should be able to accept or reject the language. For auditing purposes, that response should be recorded.
 
-### Direct Protocol
+See an example of a consent language.
 
-Direct is a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
+See detailed HIPAA guidance for Blue Button.
 
-As a dataholder, you will need to send patient health information from your system to a Direct address. In order to do that, your system needs to be able to send that payload via SMTP and SMIME through a Health Information Service Provider (HISP). The functionality of a HISP can be internal to your system or hosted externally.
+#### 2. Frequency
 
-A HISP is a component that handles Direct message delivery and receipt. For Blue Button, a HISP must be able to:
-- Send messages via SMTP
-- Discover certificates via LDAP and DNS
-- Encrypt using S/MIME
-- Error Cases
+A system must allow the user to set and change at least two options for transmit frequency:
 
-Your system can communicate the payload and destination Direct address to a HISP via SOAP or REST.
+1. Send a single one-time push of health information to the supplied Direct address(es)
+2. Continually push health information to the supplied Direct address(es) when the patient record is updated (See [Triggers](#))
 
-Link to Direct Spec - IE how to build a HISP
-Link to Sample Code - Head start in Java, .NET, etc...
+Other frequencies are permitted and can be provided by the implementer.
 
-#### Certificate Exchange
-Pulls from a "trusted" White list. Must be able to pull from multiple whitelists. Must pull from whitelists at X frequency.
+#### 3. Direct Addresses
 
-#### Certificate Discovery
-More details on DNS and LDAP. The ability to send to any address that is given to you.
+A system must be able to accept one or more Direct Addresses. A Direct address may look like name@direct.something.com. 
 
-### Automation
+- For field validation, a Direct address follows the form of an email address.
+- For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](#))
 
-Sending frequency. Triggers.
+#### 4. Revoking Transmit Request
 
-### Payload
+Patients may not revoke authorization retrospectively, but must be able to revoke authorization prospectively. There must be a mechanism in the provider interface and patient portal for the user to terminate all future transmissions.
 
-- Clinical Content: Needs to be a CCDA with MU-2 sections and fields.
-- Claims: 
+### C. Transmitting Using the Direct Protocol
 
-Should be CCDA/MU-2 for health data. Should be YYY for claims data. Packaging.
+The Direct Protocol is a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
-## Privacy & Security
+As a dataholder, you will need to send patient health information from your system to a Direct address. In order to do that, your system needs to be able to send that payload via SMTP and S/MIME through a Health Information Service Provider (HISP). A HISP is a component that handles Direct message delivery and receipt. The functionality of a HISP can be internal to your system or hosted externally. 
 
-Guidance - It's okay to use publically discoverd certificates to send a Direct message initiated by the consumer. This ensures everything transmitted is encrypted. 
+For Blue Button, a HISP must be able to:
+- ***Send***: A message and its payload must be sent via SMTP
+- ***Use Certificates***: A HISP must [discover certificates via LDAP and DNS](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit)
+- ***Encrypt***: Messages will be encrypted using S/MIME
+- ***Handle Errors***: Provide [error codes/responses](http://wiki.directproject.org/file/view/Implementation+Guide+for+Delivery+Notification+in+Direct+2012060601.pdf/343915016/Implementation%20Guide%20for%20Delivery%20Notification%20in%20Direct%202012060601.pdf) to the data holder's system
 
-(The certificates do not need to be exchanged.)
+Your system will communicate the payload and destination Direct address to a HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
-A patient should be able to send their files to any Direct address.
 
-Link to Letter/Guidance from ONC/OCR.
+See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
-Best Practice / Suggestion - Show a lock. Show a signature icon too.
+### D. Automation and Triggers
 
-Under HIPAA a patient may request a provider to send their information in the form of their choosing. For Blue Button, a provider should give patients a standardize a way of requesting their information.
+When the patient has requested "ongoing" sharing of information, the data holder's system will have to use internal triggers that will cause new information to be sent. How this is done will differ from system to system, but we suggest the following as a starting point:
 
-<!---
+***Clinical Systems***:
+- Discharge or transition to a new care setting (Acute/ER/Inpatient)
+- End of encounter (Ambulatory)
+- Any time significant new information is received (e.g., new image or lab report)
 
-Temp Area
-Entire Record
-Package - File List, Grandma
+***Payer Systems***:
+- Example 1
+- Example 2
+- Example 3
 
--->
+Other triggers are permitted and encouraged. It is up to the implementer.
+
+### E. Payload
+
+Each time a transmission happens, the entire content of a patient's record should be sent. It will be up to the receiving party to manage the differences in content between transmissions.
+
+- ***Clinical Content***: [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
+- ***Payer Content***: TBD
+
+

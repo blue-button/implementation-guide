@@ -145,7 +145,7 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	</tr>
 </table>
 
-Link to [Companion Guide to Consolidated CDA](http://wiki.siframework.org/Companion+Guide+to+Consolidated+CDA+for+MU2).
+Link to [Companion Guide to Consolidated CDA](http://wiki.siframework.org/Companion+Guide+to+Consolidated+CDA+for+MU2) produced by ONC.
 
 ### Human Readable Stylesheet
 If a patient or other person is the main consumer of the health record, it should include a stylesheet. 
