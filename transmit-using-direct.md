@@ -124,14 +124,8 @@ We have created two sets of storyboards that match the 2 key user flows. The fir
 
 ### Provider Setting (EMR)
 
-Storyboard describing flow.
+***1. Patient provides consent to a provider***
 
-Way 1, in-person.
-Way 2, clipboard consent.
+***2. Provider accesses patient record and adds a Direct address***
 
-Patient provides consent to Provider. Provider uses EMR. Goes to Patient Record. Clicks add Direct Address. Enters a Direct Address. Check if always want to send. Clicks "Add & Send".
-
-Ability to stop sending.
-
-Handling error cases: bad address
-
+***3. Provider adds the Direct address and selects the send frequency.***
