@@ -103,7 +103,7 @@ The payload will be zipped and packaged using XDR and XDM.
 
 We have created two sets of storyboards that match the 2 key user flows. The first is within the patient portal and the second is in the provider's interface. These sketches are just examples of how transmitting using Direct could be implemented.
 
-### Patient Portal
+### A. Patient Portal
 
 In this first flow, a patient uses the patient portal to send his/her record to a Direct address. This flow assumes a patient knows how to interact with the patient portal.
 
@@ -125,7 +125,7 @@ In this first flow, a patient uses the patient portal to send his/her record to 
 
 After clicking ***Share*** the patient will have successfully transmitted his/her record.
 
-### Provider Setting (EMR)
+### B. Provider Setting (EMR)
 
 In this second flow, we describe how a patient can ask their provider to setup the transmission of his/her record. This assumes that the provider has received authorization and instructions from the patient.
 
