@@ -69,6 +69,8 @@ For Blue Button, a HISP must be able to:
 
 Your system will communicate the payload and destination Direct address to a HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
+***Important***: A patient must be able to send their medical information to ***any*** Direct address that they provide. It is sufficient to use the publically discovered certificate via DNS or LDAP to encrypt the message.
+
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
@@ -82,9 +84,8 @@ When the patient has requested "ongoing" sharing of information, the data holder
 - Any time significant new information is received (e.g., new image or lab report)
 
 ***Payer Systems***:
-- Example 1
-- Example 2
-- Example 3
+- New adjudicated claims data is available
+- New explanation of benefits is available
 
 Other triggers are permitted and encouraged. It is up to the implementer.
 
@@ -104,6 +105,8 @@ We have created two sets of storyboards that match the 2 key user flows. The fir
 
 ### Patient Portal
 
+In this first flow, a patient uses the patient portal to send his/her record to a Direct address. This flow assumes a patient knows how to interact with the patient portal.
+
 ***1. Patient logs into the patient portal***
 
 ![Patient logs in](images/patient-1.png)
@@ -114,18 +117,32 @@ We have created two sets of storyboards that match the 2 key user flows. The fir
 
 ***3. Patient reads and accepts transmit terms***
 
-![Patient clicks share with Direct](images/patient-3.png)
+![Patient reads and accepts transmit terms](images/patient-3.png)
 
 ***4. Patient enters Direct address and selects transmit frequency***
 
-![Patient clicks share with Direct](images/patient-4.png)
+![Patient enters Direct address](images/patient-4.png)
 
-***5. Patient has successful transmitted their health record***
+After clicking ***Share*** the patient will have successfully transmitted his/her record.
 
 ### Provider Setting (EMR)
 
-***1. Patient provides consent to a provider***
+In this second flow, we describe how a patient can ask their provider to setup the transmission of his/her record. This assumes that the provider has received authorization and instructions from the patient.
 
-***2. Provider accesses patient record and adds a Direct address***
+***1. Provider accesses patient record***
 
-***3. Provider adds the Direct address and selects the send frequency.***
+![Provider accesses patient record](images/provider-1.png)
+
+In the sketch above, we present a Direct address much like we would an Email address. There's a section for ***Direct Address*** and a button to add more. This action associates a Direct address with a patient's record (See 2A).  There's also a ***Share*** button on the top right to facilitate a one-time share (See 2B).
+
+***2A. Provider adds the Direct address and selects the send frequency.***
+
+Clicking on ***Add*** under ***Direct Address*** will show this screen:
+
+![Adding a Direct Addresss](images/provider-2.png)
+
+***2B. Provider adds the Direct address and selects the send frequency.***
+
+Clicking on ***Share*** on the top right will show this screen:
+
+![One Time Send](images/provider-3.png)
