@@ -72,7 +72,7 @@
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
-	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px;}
 	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
 	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
 	h5 { font-size: 17px; line-height: 24px; }
@@ -89,6 +89,14 @@
 
 	code { font-family: "Droid Sans Mono", "Lucida Console", "Courier New", monospace; }
 	pre { font-family: "Droid Sans Mono", "Lucida Console", "Courier New", monospace; }
+
+	pre {
+		 white-space: pre-wrap;       /* css-3 */
+		 white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		 white-space: -pre-wrap;      /* Opera 4-6 */
+		 white-space: -o-pre-wrap;    /* Opera 7 */
+		 word-wrap: break-word;       /* Internet Explorer 5.5+ */
+		}
 
 /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
@@ -323,7 +331,7 @@ td{
 }
 
 .documentation h2{
-	font-size: 20px; line-height: 22px; margin-bottom: 8px; 
+	font-size: 20px; line-height: 22px; margin-bottom: 8px; margin-top: 30px;  
 }
 
 .documentation h3{
