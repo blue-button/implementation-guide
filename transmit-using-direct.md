@@ -9,7 +9,7 @@ This section describes the use of the [Direct Project](http://directproject.org)
 
 Examples of data holder systems include: provider's EHR, health insurance claims database, or pharmacy dispensing system. Examples of third parties include: personal health records, mobile applications, or web services.
 
-## Technical
+## 1. Technical
 
 ### A. Authentication
 A patient's identity must be validated before a transmit can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials. In the case of a live interaction with the patient or their authorized representative, the provider is responsible for "in-person" identity validation.
@@ -99,7 +99,7 @@ Each time a transmission happens, the entire content of a patient's record shoul
 The payload will be zipped and packaged using XDR and XDM.
 
 
-## Workflow
+## 2. Workflow
 
 We have created two sets of storyboards that match the 2 key user flows. The first is within the patient portal and the second is in the provider's interface. These sketches are just examples of how transmitting using Direct could be implemented.
 
