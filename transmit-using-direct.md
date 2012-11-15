@@ -40,7 +40,7 @@ See detailed HIPAA guidance for Blue Button.
 A system must allow the user to set and change at least two options for transmit frequency:
 
 1. Send a single one-time push of health information to the supplied Direct address(es)
-2. Continually push health information to the supplied Direct address(es) when the patient record is updated (See [Triggers](#))
+2. Continually push health information to the supplied Direct address(es) when the patient record is updated (See [Triggers](#triggers))
 
 Other frequencies are permitted and can be provided by the implementer.
 
@@ -49,7 +49,7 @@ Other frequencies are permitted and can be provided by the implementer.
 A system must be able to accept one or more Direct Addresses. A Direct address may look like name@direct.something.com. 
 
 - For field validation, a Direct address follows the form of an email address.
-- For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](#))
+- For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit))
 
 Note: To ensure legitimacy of the certificate, it must be a level 1 and come from a trusted authority.
 
@@ -76,7 +76,7 @@ Your system will communicate the payload and destination Direct address to a HIS
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
-### E. Automation and Triggers
+### <a id="triggers"></a>E. Automation and Triggers
 
 When the patient has requested "ongoing" sharing of information, the data holder's system will have to use internal triggers that will cause new information to be sent. How this is done will differ from system to system, but we suggest the following as a starting point:
 
@@ -93,16 +93,24 @@ Other triggers are permitted and encouraged. It is up to the implementer.
 
 ### F. Payload
 
-#### Clinical Content
-When a transmission happens, the patient's health record will be sent to the Direct address that was provided by the patient. The primary content of the transmission will be the ***Clinical Summary***, which is the entire patient's health history.
+When a transmission occurs, the following should be part of the payload as a multi-part MIME:
+1. Clinical Summary
+2. Additional Documents
+3. Request.txt
 
+
+#### 1. Clinical Summary
+The primary content of the transmission will be the ***Clinical Summary***, which is the entire patient's health history.
+
+The content format should be using the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
+
+#### 2. Additional Documents
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
 - ***Transition of Care / Referral Summary***
 - ***Ambulatory Summary***
 - ***Inpatient Summary***
 
-The content format should be using the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
-
+#### 3. Request.txt
 The payload should also include a ***request.txt*** file that attributes this transmission was on behalf of the patient:
 
 {% highlight text %}
@@ -110,9 +118,6 @@ These records were sent by the provider on behalf of [Patient Name].
 {% endhighlight %}
 
 All the files can be attached to the message as a multi-part MIME.
-
-#### Payer Content
-There is a workgroup actively working on describing how medical claims data should be structured. If this is an area that is relevant to you or your company, participate in the ABBI [Workgroup for Payer Content](http://wiki.siframework.org/ABBI+Payers+Workgroup).
 
 <!--
 ## 2. Workflow
