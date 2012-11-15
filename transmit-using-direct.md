@@ -65,7 +65,7 @@ As a dataholder, you will need to send patient health information from your syst
 
 For Blue Button, a HISP must be able to:
 - ***Send***: A message and its payload must be sent via SMTP
-- ***Signing a Message***: A message must be signed by a [level 1 or better certificate](#).
+- ***Signing a Message***: A message must be signed by a level 1 or better certificate.
 - ***Encrypt***: Messages will be encrypted using S/MIME
 - ***Use Encryption Certificates***: A HISP must [discover certificates via LDAP and DNS](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit) to encrypt messages
 - ***Handle Errors***: Provide [error codes/responses](http://wiki.directproject.org/file/view/Implementation+Guide+for+Delivery+Notification+in+Direct+2012060601.pdf/343915016/Implementation%20Guide%20for%20Delivery%20Notification%20in%20Direct%202012060601.pdf) to the data holder's system
@@ -76,7 +76,7 @@ Your system will communicate the payload and destination Direct address to a HIS
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
-### <a id="triggers"></a>E. Automation and Triggers
+### E. Automation and Triggers {#triggers}
 
 When the patient has requested "ongoing" sharing of information, the data holder's system will have to use internal triggers that will cause new information to be sent. How this is done will differ from system to system, but we suggest the following as a starting point:
 
