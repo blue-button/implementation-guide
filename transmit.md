@@ -3,9 +3,12 @@ layout: default
 title: Best Practices for Transmitting Data
 ---
 
-# Best Practices for Transmitting Data
+# Transmitting Health Data
 
-Describe the power of sending via Direct.
-Describe the reach of sending via Email.
+Equipping patients with the ability to send their records wherever they choose empowers them to better manage their health. Working with the Blue Button community, we have identified two ways to send health data.
 
-Show why both are important. One enables an ecosystem (Direct). The other allows us to reach the vast population.
+[####Transmitting Health Data Using Direct Protocol](transmit-using-direct.html)
+This section describes how to send health data securely using the Direct protocol. It also describes how to automate the transmission.
+
+[####Transmitting Health Data Using Email](transmit-using-email.html)
+This section is in-progress and is being drafted by the [Workgroup for Push](http://wiki.siframework.org/ABBI+Push+Workgroup).
