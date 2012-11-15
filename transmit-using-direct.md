@@ -35,7 +35,7 @@ See an example of a consent language.
 
 See detailed HIPAA guidance for Blue Button.
 
-#### 2. Frequency
+#### 2. Frequency Preferences
 
 A system must allow the user to set and change at least two options for transmit frequency:
 
@@ -50,6 +50,8 @@ A system must be able to accept one or more Direct Addresses. A Direct address m
 
 - For field validation, a Direct address follows the form of an email address.
 - For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](#))
+
+Note: To ensure legitimacy of the certificate, it must be a level 1 and come from a trusted authority.
 
 #### 4. Revoking Transmit Request
 
@@ -97,6 +99,8 @@ Each time a transmission happens, the entire content of a patient's record shoul
 - ***Payer Content***: TBD
 
 The payload will be zipped and packaged using XDR and XDM.
+
+Note: Should be encounter summary (or what's relevant) and entire summary. Should also contain text file with note saying it came from patient.
 
 
 ## 2. Workflow

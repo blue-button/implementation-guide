@@ -35,7 +35,7 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	<tr>
 		<th>Encounters</th>
 		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td><a href="#test">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Immunizations</th>
