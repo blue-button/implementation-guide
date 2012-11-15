@@ -53,11 +53,11 @@ A system must be able to accept one or more Direct Addresses. A Direct address m
 
 Note: To ensure legitimacy of the certificate, it must be a level 1 and come from a trusted authority.
 
-#### 4. Revoking Transmit Request
+### C. Revoking Transmit Request
 
 Patients may not revoke authorization retrospectively, but must be able to revoke authorization prospectively. There must be a mechanism in the provider interface and patient portal for the user to terminate all future transmissions.
 
-### C. Transmitting Using the Direct Protocol
+### D. Transmitting Using the Direct Protocol
 
 The Direct Protocol is a specification for how existing standards can be used to securely transport health information over the internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
@@ -76,7 +76,7 @@ Your system will communicate the payload and destination Direct address to a HIS
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
-### D. Automation and Triggers
+### E. Automation and Triggers
 
 When the patient has requested "ongoing" sharing of information, the data holder's system will have to use internal triggers that will cause new information to be sent. How this is done will differ from system to system, but we suggest the following as a starting point:
 
@@ -91,21 +91,21 @@ When the patient has requested "ongoing" sharing of information, the data holder
 
 Other triggers are permitted and encouraged. It is up to the implementer.
 
-### E. Payload
+### F. Payload
 
 #### Clinical Content
 When a transmission happens, the patient's health record will be sent to the Direct address that was provided by the patient. The primary content of the transmission will be the ***Clinical Summary***, which is the entire patient's health history.
 
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
-- Transition of Care / Referral Summary
-- Ambulatory Summary
-- Inpatient Summary
+- ***Transition of Care / Referral Summary***
+- ***Ambulatory Summary***
+- ***Inpatient Summary***
 
 The content format should be using the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
 
 The payload should also include a ***request.txt*** file that attributes this transmission was on behalf of the patient:
 
-{% highlight %}
+{% highlight text %}
 These records were sent by the provider on behalf of [Patient Name].
 {% endhighlight %}
 
