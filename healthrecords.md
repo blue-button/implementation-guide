@@ -24,78 +24,78 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 	</tr>
 	<tr>
 		<th>Header</th>
-		<td>Patient Information</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Patient information and demographics</td>
+		<td><a href="#header">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Allergies, Adverse Reactions, and Alerts</th>
 		<td>Includes status and severity of each.</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td><a href="#allergies">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Encounters</th>
-		<td>ddd</td>
-		<td><a href="#test">Jump to XML</a></td>
+		<td>Surgeries, ED visits, etc.</td>
+		<td><a href="#encouters">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Immunizations</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Immunizations and vaccines</td>
+		<td><a href="#immunizations">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Medications</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>As prescribed by the provider</td>
+		<td><a href="#medications">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Care Plan</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Planned activities and encounters</td>
+		<td><a href="#careplan">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Discharge Medications</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Part of hospital discharge summary</td>
+		<td><a href="#discharge">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Reason for Referral</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Written reason for referral</td>
+		<td><a href="#reason">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Problem List</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Concerns, complaints, and observations</td>
+		<td><a href="#problemlist">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Procedures</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>History of procedures</td>
+		<td><a href="#procedures">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Functional and Cognitive Status</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>List of impairments</td>
+		<td><a href="#status">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Results</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Includes laboratory tests</td>
+		<td><a href="#results">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Social History</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Observations like smoking, drinking, etc.</td>
+		<td><a href="#social">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Vital Signs</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Includes height, weight, blood pressure, etc.</td>
+		<td><a href="#vitals">Jump to XML</a></td>
 	</tr>
 	<tr>
 		<th>Discharge Instructions</th>
-		<td>...</td>
-		<td><a href="#">Jump to XML</a></td>
+		<td>Written discharge instructions</td>
+		<td><a href="#dischargeinstructions">Jump to XML</a></td>
 	</tr>
 </table>
 
@@ -110,11 +110,11 @@ Here is a [sample stylesheet](#).
 
 ## 3. Breakdown of Consolidated CDA XML
 
-We will dissect a well-formed patient health record.
+This section will dissect a well-formed patient health record. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
 
 ### Type of XML File
 
-Here we reference the schema from HL7.
+The XML file references the schema from HL7.
 
 {% highlight xml %}
 <?xml version="1.0"?>
@@ -126,7 +126,7 @@ Here we reference the schema from HL7.
  xmlns:sdtc="urn:hl7-org:sdtc">
  {% endhighlight %}
 
-### Header
+### Header {#header}
 
 The ***CDA Header*** includes details about the identity of the patient, the creator of the XML document, and the reason the encounter happened.
 
@@ -739,7 +739,7 @@ The ***CDA Header*** includes details about the identity of the patient, the cre
    </componentOf>
 {% endhighlight %}
 
-### Body
+### Body {#body}
 
 This is the start of the ***CDA Body*** which contains all the sections in the health record.
 
@@ -752,7 +752,7 @@ This is the start of the ***CDA Body*** which contains all the sections in the h
          <!-- *********************** -->
 {% endhighlight %}
 
-### Allergies, Adverse Reactions, and Alerts
+### Allergies, Adverse Reactions, and Alerts {#allergies}
 
 This ***Alerts*** section contains a description of allergies, reactions, and alerts for the particular patient.
 
@@ -1290,9 +1290,9 @@ Allergies, Adverse Reactions, Alerts
          </component>
 {% endhighlight %}
 
-### Encounters
+### Encounters {#encounters}
 
-This ***Encounters*** section...
+This ***Encounters*** section includes all the office visits, emergency room visits, surgeries, etc.
 
 {% highlight xml %}
          <!--
@@ -1472,9 +1472,9 @@ ENCOUNTERS
          </component>
 {% endhighlight %}
 
-### Immunizations
+### Immunizations {#immunizations}
 
-This ***Immunizations*** section...
+This ***Immunizations*** section includes all the vaccines an individual has been administered.
 
 {% highlight xml %}
          <!--
@@ -1674,9 +1674,9 @@ IMMUNIZATIONS
          </component>
 {% endhighlight %}
 
-### Medications
+### Medications {#medications}
 
-This ***Medications*** section...
+This section includes all the ***Medications*** prescribed to an individual. It includes the type of medication, start date, instructions, and why it was prescribed.
 
 {% highlight xml %}
          <!--
@@ -2063,9 +2063,9 @@ MEDICATIONS
          </component>
 {% endhighlight %}
 
-### Care Plan
+### Care Plan {#careplan}
 
-This ***Care Plan*** section...
+This ***Care Plan*** section lists all the planned activities and encounters recorded in the system.
 
 {% highlight xml %}
          <!--
@@ -2194,9 +2194,9 @@ CARE PLAN
          </component>
 {% endhighlight %}
 
-### Discharge Medications
+### Discharge Medications {#discharge}
 
-This ***Hospital Discharge Summary*** section...
+This ***Hospital Discharge Summary*** section captures the medication prescribed at discharge.
 
 {% highlight xml %}
   <!--
@@ -2614,9 +2614,9 @@ HOSPITAL DISCHARGE MEDICATIONS
          </component>
 {% endhighlight %}
 
-### Reason for Referral
+### Reason for Referral {#reason}
 
-This ***Referral*** section...
+This ***Referral*** section is a free text field that captures the reason for the referral.
 
 {% highlight xml %}
          <!--
@@ -2642,9 +2642,9 @@ REASON FOR REFERRAL
          </component>
 {% endhighlight %}
 
-### Problem List
+### Problem List {#problemlist}
 
-The ***Problem List*** section...
+The ***Problem List*** section includes all concerns, complaints, and observations; with their corresponding status.
 
 {% highlight xml %}
          <!--
@@ -2978,9 +2978,9 @@ PROBLEM LIST
          </component>
 {% endhighlight %}
 
-### Procedures
+### Procedures {#procedures}
 
-The ***Procedures*** section...
+The ***Procedures*** section details a history of procedures like x-rays.
 
 {% highlight xml %}
          <!--
@@ -3115,9 +3115,9 @@ PROCEDURES
          </component>
 {% endhighlight %}
 
-### Functional and Cognitive Status
+### Functional and Cognitive Status {#status}
 
-This ***Functional Status*** section...
+This ***Functional Status*** section details the different functional and cognitive impairments.
 
 {% highlight xml %}
          <!--
@@ -3263,9 +3263,9 @@ FUNCTIONAL and COGNITIVE STATUS
          </component>
 {% endhighlight %}
 
-### Results
+### Results {#results}
 
-This ***Results*** section...
+This ***Results*** section includes all laboratory results.
 
 {% highlight xml %}
          <!--
@@ -3487,9 +3487,9 @@ RESULTS
          </component>
 {% endhighlight %}
 
-### Social History
+### Social History {#social}
 
-This ***Social History*** section...
+This ***Social History*** section includes observations like smoking and drinking habits.
 
 {% highlight xml %}
          <!--
@@ -3634,9 +3634,9 @@ SOCIAL HISTORY
          </component>
 {% endhighlight %}
 
-### Vital Signs
+### Vital Signs {#vitals}
 
-The ***Vital Signs*** section...
+The ***Vital Signs*** section captures vitals that change over time like height, weight, and blood pressure.
 
 {% highlight xml %}
          <!--
@@ -3918,9 +3918,9 @@ VITAL SIGNS
          </component>
 {% endhighlight %}
 
-### Discharge Instructions
+### Discharge Instructions {#dischargeinstructions}
 
-The ***Hospital Discharge Instructions*** section...
+The ***Hospital Discharge Instructions*** section is a free text field that captures the discharge instructions as written by the provider.
 
 {% highlight xml %}
          <!-- 
@@ -3964,16 +3964,16 @@ HOSPITAL DISCHARGE INSTRUCTIONS
 
 ### End of Document
 
-The document ends...
-
 {% highlight xml %}
       </structuredBody>
    </component>
 </ClinicalDocument>
 {% endhighlight %}
 
+<!--
 ## 4. Commonly Asked Questions
 
 1. What is the difference between a CCD/C32 and CCD/CCDA?
 
 2. If I am outputting a CCD/C32, is that sufficient?
+-->
