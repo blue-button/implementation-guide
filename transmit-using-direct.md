@@ -14,7 +14,7 @@ Examples of data holder systems include: provider's EHR, health insurance claims
 ### A. Authentication
 A patient's identity must be validated before a transmit can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials. In the case of a live interaction with the patient or their authorized representative, the provider is responsible for "in-person" identity validation.
 
-These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit. 
+These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit in Meaningful Use Stage 2. 
 
 ### B. Handling a Patient's Request for Transmit
 
@@ -65,14 +65,14 @@ As a dataholder, you will need to send patient health information from your syst
 
 For Blue Button, a HISP must be able to:
 - ***Send***: A message and its payload must be sent via SMTP
-- ***Use Certificates***: A HISP must [discover certificates via LDAP and DNS](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit)
+- ***Signing a Message***: A message must be signed by a [level 1 or better certificate](#).
 - ***Encrypt***: Messages will be encrypted using S/MIME
+- ***Use Encryption Certificates***: A HISP must [discover certificates via LDAP and DNS](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit) to encrypt messages
 - ***Handle Errors***: Provide [error codes/responses](http://wiki.directproject.org/file/view/Implementation+Guide+for+Delivery+Notification+in+Direct+2012060601.pdf/343915016/Implementation%20Guide%20for%20Delivery%20Notification%20in%20Direct%202012060601.pdf) to the data holder's system
 
 Your system will communicate the payload and destination Direct address to a HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
 ***Important***: A patient must be able to send their medical information to ***any*** Direct address that they provide. It is sufficient to use the publically discovered certificate via DNS or LDAP to encrypt the message.
-
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
