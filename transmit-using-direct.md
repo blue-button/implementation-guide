@@ -93,16 +93,28 @@ Other triggers are permitted and encouraged. It is up to the implementer.
 
 ### E. Payload
 
-Each time a transmission happens, the entire content of a patient's record should be sent. It will be up to the receiving party to manage the differences in content between transmissions.
+#### Clinical Content
+When a transmission happens, the patient's health record will be sent to the Direct address that was provided by the patient. The primary content of the transmission will be the ***Clinical Summary***, which is the entire patient's health history.
 
-- ***Clinical Content***: [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
-- ***Payer Content***: TBD
+Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
+- Transition of Care / Referral Summary
+- Ambulatory Summary
+- Inpatient Summary
 
-The payload will be zipped and packaged using XDR and XDM.
+The content format should be using the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
 
-Note: Should be encounter summary (or what's relevant) and entire summary. Should also contain text file with note saying it came from patient.
+The payload should also include a ***request.txt*** file that attributes this transmission was on behalf of the patient:
 
+{% highlight %}
+These records were sent by the provider on behalf of [Patient Name].
+{% endhighlight %}
 
+All the files can be attached to the message as a multi-part MIME.
+
+#### Payer Content
+There is a workgroup actively working on describing how medical claims data should be structured. If this is an area that is relevant to you or your company, participate in the ABBI [Workgroup for Payer Content](http://wiki.siframework.org/ABBI+Payers+Workgroup).
+
+<!--
 ## 2. Workflow
 
 We have created two sets of storyboards that match the 2 key user flows. The first is within the patient portal and the second is in the provider's interface. These sketches are just examples of how transmitting using Direct could be implemented.
@@ -150,3 +162,4 @@ Clicking on ***Add*** under ***Direct Address*** will show this screen:
 Clicking on ***Share*** on the top right will show this screen:
 
 ![One Time Send](images/provider-3.png)
+-->
