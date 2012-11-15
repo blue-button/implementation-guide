@@ -7,7 +7,7 @@ title: Blue Button Implementation Guide
 
 An electronic health record keeps a digital record of all clinical information. With the amount of variability in Health IT systems, it is important to have a consistent set of health information for each patient. Meaningful Use specifies the fields and content structure of clinical data that patients need to keep about themselves, as they move between provider settings.
 
-For Blue Button, the recommended standard for representing the patient health record is the ***HL7 Consolidated Clinical Document Architecture*** also known as the Consolidated CDA.
+For Blue Button, the recommended standard for representing the patient health record is the [***HL7 Consolidated Clinical Document Architecture***](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=258) also known as the Consolidated CDA.
 
 The Consolidated CDA is a XML-based standard that specifies the encoding, structure, and semantics of a clinical document.
 
