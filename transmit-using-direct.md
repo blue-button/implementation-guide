@@ -96,7 +96,7 @@ Other triggers are permitted and encouraged. It is up to the implementer.
 When a transmission occurs, the following should be part of the payload as a multi-part MIME:
 1. Clinical Summary
 2. Additional Documents
-3. Request.txt
+3. Transmit Context
 
 
 #### 1. Clinical Summary
@@ -110,14 +110,12 @@ Depending on the trigger or type of encounter, it may also be appropriate to inc
 - ***Ambulatory Summary***
 - ***Inpatient Summary***
 
-#### 3. Request.txt
-The payload should also include a ***request.txt*** file that attributes this transmission was on behalf of the patient:
+#### 3. Transmit Context
+The message body should also include attribution that this transmission was on behalf of the patient in text/plain or text/html:
 
 {% highlight text %}
-These records were sent by the provider on behalf of [Patient Name].
+This message was sent by [Provider Name] at the request of [Patient Name].
 {% endhighlight %}
-
-All the files can be attached to the message as a multi-part MIME.
 
 <!--
 ## 2. Workflow
