@@ -51,8 +51,6 @@ A system must be able to accept one or more Direct Addresses. A Direct address m
 - For field validation, a Direct address follows the form of an email address.
 - For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit))
 
-Note: To ensure legitimacy of the certificate, it must be a level 1 and come from a trusted authority.
-
 ### C. Revoking Transmit Request
 
 Patients may not revoke authorization retrospectively, but must be able to revoke authorization prospectively. There must be a mechanism in the provider interface and patient portal for the user to terminate all future transmissions.
@@ -76,6 +74,8 @@ Your system will communicate the payload and destination Direct address to a HIS
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
+***Workgroup Discussion***: The team and workgroup are actively discussing how certificate discovery can be done in a way that enables a provider to send a CCDA to any Direct address that a patient provides. The current proposal on the table uses the certificate discovered via DNS and LDAP to encrypt the message. There is an issue with this approach when the certificate is self-signed. There is a risk if DNS spoofing or a man in the middle attack happens. We are gauging the level/impact of this risk. One solution that has been recently proposed is to require third parties to have a Level 1 certificate from an SSL authority like Verisign/Comodo/Geotrust.
+
 ### E. Automation and Triggers {#triggers}
 
 When the patient has requested "ongoing" sharing of information, the data holder's system will have to use internal triggers that will cause new information to be sent. How this is done will differ from system to system, but we suggest the following as a starting point:
@@ -89,7 +89,7 @@ When the patient has requested "ongoing" sharing of information, the data holder
 - New adjudicated claims data is available
 - New explanation of benefits is available
 
-Other triggers are permitted and encouraged. It is up to the implementer.
+Other triggers are permitted and encouraged. It is up to the implementer. Systems that are unable to implement triggers should investigate transmitting records at predetermined time intervals.
 
 ### F. Payload
 
@@ -100,9 +100,9 @@ When a transmission occurs, the following should be part of the payload as a mul
 
 
 #### 1. Clinical Summary
-The primary content of the transmission will be the ***Clinical Summary***, which is the entire patient's health history.
+The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history.
 
-The content format should be using the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html)
+The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml+ccda.
 
 #### 2. Additional Documents
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
@@ -110,12 +110,16 @@ Depending on the trigger or type of encounter, it may also be appropriate to inc
 - ***Ambulatory Summary***
 - ***Inpatient Summary***
 
+The payload may include other documents as well.
+
 #### 3. Transmit Context
 The message body should also include attribution that this transmission was on behalf of the patient in text/plain or text/html:
 
 {% highlight text %}
 This message was sent by [Provider Name] at the request of [Patient Name].
 {% endhighlight %}
+
+***Workgroup Discussion***: The Content and Push workgroups are discussing how the payload should be structured. The choice is between XDR/XDM vs. multi-part MIME. They are also deciding how the transmit context text should be constructed.
 
 <!--
 ## 2. Workflow

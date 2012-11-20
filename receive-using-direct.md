@@ -48,15 +48,15 @@ Blue Button messages will contain:
 	</tr>
 	<tr>
 		<th>Transition of Care Summary</th>
-		<td>application/xml+ccd</td>
+		<td>application/xml+ccda</td>
 	</tr>
 	<tr class="odd">
 		<th>Ambulatory Summary</th>
-		<td>application/xml+ccd</td>
+		<td>application/xml+ccda</td>
 	</tr>
 	<tr>
 		<th>Inpatient Summary</th>
-		<td>application/xml+ccd</td>
+		<td>application/xml+ccda</td>
 	</tr>
 	<tr class="odd">
 		<th>JPEG Image</th>
