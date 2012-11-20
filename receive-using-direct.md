@@ -26,6 +26,7 @@ Your application must be able to:
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
+***Workgroup Discussion***: The team and workgroup are actively discussing how certificate discovery can be done in a way that enables a provider to send a CCDA to any Direct address that a patient provides. The current proposal on the table uses the certificate discovered via DNS and LDAP to encrypt the message. There is an issue with this approach when the certificate is self-signed. There is a risk if DNS spoofing or a man in the middle attack happens. We are gauging the level/impact of this risk. One solution that has been recently proposed is to require third parties to have a Level 1 certificate from an SSL authority like Verisign/Comodo/Geotrust.
 
 ## 2. Blue Button Format and Payload
 
