@@ -101,14 +101,44 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 
 Link to [Companion Guide to Consolidated CDA](http://wiki.siframework.org/Companion+Guide+to+Consolidated+CDA+for+MU2) produced by ONC.
 
-## 2. Human Readable Stylesheet
+## 2. Codes, Dictionaries, and Vocabularies
+Throughout the CCDA there will be a variety of codes used to describe the values within it.
+
+<table>
+   <tr>
+      <th class="table-column">Code System</th>
+      <th class="table-column">Description</th>
+   </tr>
+   <tr>
+      <th><a href="http://loinc.org/">LOINC</a></th>
+      <td>Database and universal standard for identifying medical laboratory observations</td>
+   </tr>
+   <tr class="odd">
+      <th><a href="http://www.nlm.nih.gov/research/umls/rxnorm/">RxNorm</a></th>
+      <td>Normalized names for clinical drugs</td>
+   </tr>
+   <tr>
+      <th><a href="http://www.ihtsdo.org/snomed-ct/snomed-ct0/">SNOWMED CT</a></th>
+      <td>Collection of clinical terms</td>
+   </tr>
+   <tr class="odd">
+      <th><a href="#">ICD-10</a></th>
+      <td>Codes to classify diseases and a wide variety of signs and symptoms</td>
+   </tr>
+   <tr>
+      <th><a href="#">ICD-9</a></th>
+      <td>Codes to classify diseases and a wide variety of signs and symptoms</td>
+   </tr>
+</table>
+
+## 3. Human Readable Stylesheet
 If a patient or other person is the main consumer of the health record, it should include a stylesheet. 
 
 To make the CCDA XML human readable, an XSLT stylesheet should be included. This will allow a person to easily view their information on a computer or print it.
 
 Here is a [sample stylesheet](#).
 
-## 3. Breakdown of Consolidated CDA XML
+## 4. Breakdown of Consolidated CDA XML
 
 This section will dissect a well-formed patient health record. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
 
