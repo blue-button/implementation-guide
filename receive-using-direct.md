@@ -7,16 +7,19 @@ title: Receiving Blue Button Data Using the Direct Protocol
 
 This section describes the use of the [Direct Project](http://directproject.org) specification to receive health data securely from a data holder on behalf of a patient or their authorized representative. The ability to receive health data securely enables an ecosystem to be built on patient health data.
 
+![Receive Diagram](images/receive.png)
+
 ## 1. Using the Direct Protocol to Receive Data
 The Direct Protocol is a specification for how existing standards can be used to securely transport health information over the Internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
 
-Your application will need to integrate with a component that can accept Direct messages and their payloads. This component may be internal to your application, or it may be delivered as a service by a Health Information Service Provider (HISP). 
+Your application will need to integrate with a component that can accept Direct messages and their payloads. This component is called a Security/Trust Agent (STA). A STA uses SMTP and S/MIME to ensure messages and their payload are delivered securely. A STA can be a component internal to your system, or hosted externally. 
 
-For Blue Button, your Direct HISP component must be able to:
+When an STA is hosted externally, it is usually by a Health Information Services Provider (HISP). 
+
+For Blue Button, your Direct STA/HISP must be able to:
 
 - ***Generate valid Direct addresses*** for your users / use cases.
-- ***Publish certificates*** for its addresses via DNS or LDAP. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
-- ***Receive messages*** from configured trading partners via the Direct Protocol. 
+- ***Publish certificates*** for its addresses via DNSSEC. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
 - ***Handle errors*** according to the applicability statement.
 
 Your application must be able to:
@@ -25,8 +28,6 @@ Your application must be able to:
 - ***Be able to parse and represent the Blue Button information*** in a method appropriate for your users / use cases. 
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
-
-***Workgroup Discussion***: The team and workgroup are actively discussing how certificate discovery can be done in a way that enables a provider to send a CCDA to any Direct address that a patient provides. The current proposal on the table uses the certificate discovered via DNS and LDAP to encrypt the message. There is an issue with this approach when the certificate is self-signed. There is a risk if DNS spoofing or a man in the middle attack happens. We are gauging the level/impact of this risk. One solution that has been recently proposed is to require third parties to have a Level 1 certificate from an SSL authority like Verisign/Comodo/Geotrust.
 
 ## 2. Blue Button Format and Payload
 
@@ -40,7 +41,11 @@ Blue Button messages will contain:
 
 - ***A clinical summary*** containing a snapshot of the patient or member’s health history. The summary will be a [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html). This section can be recognized by its MIME type, application/xml+ccd.
 
-- ***Optional additional documents.*** These may include any relevant documents, images, or healthcare-specific items such as Transition of Care / Referral Summaries, Ambulatory Summaries or Inpatient Summaries. The following table lists common MIME types for these formats, but the list is not meant to be exhaustive. 
+- ***Optional additional documents.*** These may include any relevant documents, images, or healthcare-specific items such as Transition of Care / Referral Summaries, Ambulatory Summaries or Inpatient Summaries. Below is a table that lists common MIME types for these formats, but the list is not meant to be exhaustive. 
+
+- A ***Request.txt*** that captures the context of the message in a semi-structured way.
+
+### Table of MIME Types
 
 <table>
 	<tr>
@@ -49,15 +54,15 @@ Blue Button messages will contain:
 	</tr>
 	<tr>
 		<th>Transition of Care Summary</th>
-		<td>application/xml+ccda</td>
+		<td>application/xml</td>
 	</tr>
 	<tr class="odd">
 		<th>Ambulatory Summary</th>
-		<td>application/xml+ccda</td>
+		<td>application/xml</td>
 	</tr>
 	<tr>
 		<th>Inpatient Summary</th>
-		<td>application/xml+ccda</td>
+		<td>application/xml</td>
 	</tr>
 	<tr class="odd">
 		<th>JPEG Image</th>
@@ -68,6 +73,25 @@ Blue Button messages will contain:
 		<td>...</td>
 	</tr>
 </table>
+
+### Anatomy of Request.txt
+In addition to the friendly message in the body, you may receive a ***request.txt***. This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
+
+{% highlight text %}
+Destination: [Direct Address]
+Patient: [Patient Name]
+Data-holder: [Data Holder Name]
+Recurring: [Yes / No]
+{% endhighlight %}
+
+An example of what a request.txt would look like:
+
+{% highlight text %}
+Destination: ellen.ross@somephr.org
+Patient: Ellen Ross
+Data-holder: Ashby Medical Center
+Recurring: Yes
+{% endhighlight %}
 
 
 ## 3. Frequency

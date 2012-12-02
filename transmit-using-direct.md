@@ -137,6 +137,7 @@ In addition to the friendly message in the body, you should include a ***request
 Destination: [Direct Address]
 Patient: [Patient Name]
 Data-holder: [Data Holder Name]
+Recurring: [Yes / No]
 {% endhighlight %}
 
 An example of what a request.txt would look like:
@@ -144,7 +145,8 @@ An example of what a request.txt would look like:
 {% highlight text %}
 Destination: ellen.ross@somephr.org
 Patient: Ellen Ross
-Dataholder: Ashby Medical Center
+Data-holder: Ashby Medical Center
+Recurring: Yes
 {% endhighlight %}
 
 <!--
