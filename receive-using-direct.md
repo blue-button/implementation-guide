@@ -16,16 +16,16 @@ Your application will need to integrate with a component that can accept Direct 
 
 When an STA is hosted externally, it is usually by a Health Information Services Provider (HISP). 
 
-For Blue Button, your Direct STA/HISP must be able to:
+For Blue Button, your Direct STA must be able to:
 
-- ***Generate valid Direct addresses*** for your users / use cases.
+- ***Generate valid Direct addresses*** for your users and use cases. These may be [address-bound or organizationally-bound](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding).
 - ***Publish certificates*** for its addresses via DNSSEC. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
 - ***Handle errors*** according to the applicability statement.
 
 Your application must be able to:
 
-- ***Receive decrypted/validated messages*** from the HISP component via its native interface. This interface with vary from component to component.
-- ***Be able to parse and represent the Blue Button information*** in a method appropriate for your users / use cases. 
+- ***Receive decrypted/validated messages*** from the HISP/STA via its native interface. This interface with vary from component to component.
+- ***Be able to parse and represent the Blue Button information*** in a method appropriate for your users and use cases. 
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
@@ -100,6 +100,10 @@ Recurring: Yes
 For a given address, there is the likelihood that your application will receive multiple documents over a period of time. This will be especially so, if the consumer sets up an "automated" transmission when ever their health data changes. 
 
 This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button guidelines.
+
+## 4. Best Practices for Accepting Direct Messages
+With Blue Button, we are encouraging a secure and open network of health information exchange on behalf of the patient. As a result, if your application becomes widely used, you may want to start using white and black lists to help prioritize and control messages that your application is receiving. You can also do this based on the trust anchors of the certificates used to sign messages that you are receiving.
+
 
 <!--
 
