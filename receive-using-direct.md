@@ -39,7 +39,7 @@ Blue Button messages will contain:
 
 - ***A human-readable message body.*** This body may be in text/plain or text/html format, or (as is common in many mail systems) both of these. The content of the body is up to the sending application, except that it will always begin with the text “This message was sent by *Data Holder Name* at the request of *Patient Name*.” This tag is intended to clarify the context under which information delivery was authorized.
 
-- ***A clinical summary*** containing a snapshot of the patient or member’s health history. The summary will be a [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html). This section can be recognized by its MIME type, application/xml+ccd.
+- ***A clinical summary*** containing a snapshot of the patient or member’s health history. The summary will be a [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html). This section will have a MIME type of application/xml.
 
 - ***Optional additional documents.*** These may include any relevant documents, images, or healthcare-specific items such as Transition of Care / Referral Summaries, Ambulatory Summaries or Inpatient Summaries. Below is a table that lists common MIME types for these formats, but the list is not meant to be exhaustive. 
 
