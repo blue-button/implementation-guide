@@ -124,13 +124,27 @@ The message body should also include attribution that this transmission was on b
 This message was sent by [Data Holder Name] at the request of [Patient Name].
 {% endhighlight %}
 
+An example of what that body text would look like:
+
+{% highlight text %}
+This message was sent by Ashby Medical Center at the request of Ellen Ross.
+{% endhighlight %}
+
 #### 4. Request.txt
 In addition to the friendly message in the body, you should include a ***request.txt***. This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
 
 {% highlight text %}
+Destination: [Direct Address]
+Patient: [Patient Name]
+Data-holder: [Data Holder Name]
+{% endhighlight %}
+
+An example of what a request.txt would look like:
+
+{% highlight text %}
 Destination: ellen.ross@somephr.org
 Patient: Ellen Ross
-Dataholder: Community Health Clinic
+Dataholder: Ashby Medical Center
 {% endhighlight %}
 
 <!--
