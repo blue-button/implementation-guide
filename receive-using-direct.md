@@ -45,7 +45,9 @@ Blue Button messages will contain:
 
 - A ***Request.txt*** that captures the context of the message in a semi-structured way.
 
-### Table of MIME Types
+### A. MIME Types
+
+The following is a table of common MIME types that you may encounter.
 
 <table>
 	<tr>
@@ -74,7 +76,7 @@ Blue Button messages will contain:
 	</tr>
 </table>
 
-### Anatomy of Request.txt
+### B. Anatomy of Request.txt
 In addition to the friendly message in the body, you may receive a ***request.txt***. This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
 
 {% highlight text %}
