@@ -118,7 +118,7 @@ Throughout the CCDA there will be a variety of codes used to describe the values
       <td>Normalized names for clinical drugs</td>
    </tr>
    <tr>
-      <th><a href="http://www.ihtsdo.org/snomed-ct/snomed-ct0/">SNOWMED CT</a></th>
+      <th><a href="http://www.ihtsdo.org/snomed-ct/snomed-ct0/">SNOMED CT</a></th>
       <td>Collection of clinical terms</td>
    </tr>
    <tr class="odd">
@@ -801,6 +801,7 @@ Allergies, Adverse Reactions, Alerts
                   code="48765-2"
                   codeSystem="2.16.840.1.113883.6.1"/>
                <title>ALLERGIES, ADVERSE REACTIONS, ALERTS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -1341,6 +1342,7 @@ ENCOUNTERS
                   codeSystemName="LOINC"
                   displayName="History of encounters"/>
                <title>ENCOUNTERS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -1524,6 +1526,7 @@ IMMUNIZATIONS
                   codeSystemName="LOINC"
                   displayName="History of immunizations"/>
                <title>IMMUNIZATIONS</title>
+               <!-- Unstructured text field -->
                <text><content
                      ID="immunSect"/>
                   <table
@@ -1724,6 +1727,7 @@ MEDICATIONS
                   codeSystemName="LOINC"
                   displayName="HISTORY OF MEDICATION USE"/>
                <title>Medications</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -2114,6 +2118,7 @@ CARE PLAN
                   codeSystemName="LOINC"
                   displayName="Treatment plan"/>
                <title>CARE PLAN</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -2246,6 +2251,7 @@ HOSPITAL DISCHARGE MEDICATIONS
                   code="10183-2"
                   displayName=" HOSPITAL DISCHARGE MEDICATIONS "/>
                <title>HOSPITAL DISCHARGE MEDICATIONS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -2665,6 +2671,7 @@ REASON FOR REFERRAL
                   code="42349-1"
                   displayName="REASON FOR REFERRAL"/>
                <title>REASON FOR REFERRAL</title>
+               <!-- Unstructured text field -->
                <text>
                   <paragraph>Follow up with Dr George Potomac for Asthma</paragraph>
                </text>
@@ -2692,6 +2699,7 @@ PROBLEM LIST
                   codeSystemName="LOINC"
                   displayName="PROBLEM LIST"/>
                <title>PROBLEMS</title>
+               <!-- Unstructured text field -->
                <text><content
                      ID="problems"/>
                   <list
@@ -3029,6 +3037,7 @@ PROCEDURES
                   codeSystemName="LOINC"
                   displayName="HISTORY OF PROCEDURES"/>
                <title>PROCEDURES</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -3164,6 +3173,7 @@ FUNCTIONAL and COGNITIVE STATUS
                   code="47420-5"
                   codeSystem="2.16.840.1.113883.6.1"/>
                <title>FUNCTIONAL STATUS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -3314,6 +3324,7 @@ RESULTS
                   codeSystemName="LOINC"
                   displayName="RESULTS"/>
                <title>RESULTS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table>
                      <tbody>
@@ -3538,6 +3549,7 @@ SOCIAL HISTORY
                   codeSystem="2.16.840.1.113883.6.1"
                   displayName="Social History"/>
                <title>SOCIAL HISTORY</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -3684,6 +3696,7 @@ VITAL SIGNS
                   codeSystemName="LOINC"
                   displayName="VITAL SIGNS"/>
                <title>VITAL SIGNS</title>
+               <!-- Unstructured text field -->
                <text>
                   <table
                      border="1"
@@ -3968,6 +3981,7 @@ HOSPITAL DISCHARGE INSTRUCTIONS
                   codeSystemName="LOINC"
                   displayName="HOSPITAL DISCHARGE INSTRUCTIONS"/>
                <title>HOSPITAL DISCHARGE INSTRUCTIONS</title>
+               <!-- Unstructured text field -->
                <text>
                   <content>
                      Ms. Jones, you have been seen by Dr. Henry Seven at Local Community Hospital from August 8th until August 13th 2012. You are currently being discharged from Local Community Hospital. Dr. Seven has provided the following instructions to you at this time; should you have any questions please contact a member of your healthcare team prior to discharge. If you have left the hospital and have questions, please contact Dr. Seven at 555-555-1002. 
