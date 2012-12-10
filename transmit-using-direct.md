@@ -48,7 +48,7 @@ Other frequencies are permitted and can be provided by the implementer.
 A system must be able to accept one or more Direct Addresses. A Direct address may look like ellen.ross@somephr.org or jack.smith@direct.someapp.com. 
 
 - For field validation, a Direct address follows the form of an email address.
-- For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNSSEC. (See [Certificate Discovery](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit))
+- For certificate validation, all legitimate addresses will have corresponding public certificates discoverable via DNS or LDAP. (See [Certificate Discovery](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit))
 
 ### C. Revoking Transmit Request
 
@@ -65,15 +65,28 @@ When an STA is hosted externally, it is usually by a Health Information Services
 For Blue Button, a STA must be able to:
 - ***Send***: A message and its payload must be sent via SMTP
 - ***Encrypt***: Messages will be encrypted using S/MIME
-- ***Use Encryption Certificates***: A STA must [discover certificates via DNSSEC](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit) to encrypt messages
-- ***Validate Certificates***: Certificates must be valid [Direct Address or Organizationally Bound Certificates](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding).
+- ***Use Encryption Certificates***: A STA must [discover certificates via DNS or LDAP](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit) to encrypt messages
+- ***Validate Certificates***: Certificates must be valid [Direct Address or Organizationally Bound Certificates](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding)
+- ***Trust Anchor Bundle***: A STA should automatically retrieve the latest Blue Button trust bundle
+- ***Sign Messages w. EV Certificate***: Outbound message should also be signed by an Extended Validation (EV) certificate
 - ***Handle Errors***: Provide [error codes/responses](http://wiki.directproject.org/file/view/Implementation+Guide+for+Delivery+Notification+in+Direct+2012060601.pdf/343915016/Implementation%20Guide%20for%20Delivery%20Notification%20in%20Direct%202012060601.pdf) to the data holder's system
 
 Your system will communicate the payload and destination Direct address to a STA/HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
-***Important***: A patient must be able to send their medical information to ***any*** Direct address that they provide. It is sufficient to use the publicly discovered certificate via DNSSEC to encrypt the message. There does not need to be a corresponding trust anchor in your HISP/STA's certificate store.
-
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
+
+#### Retrieving Blue Button Trust Bundle
+Your STA/HISP will need a set of trust anchors in order to transmit Direct messages. This bundle includes the trust anchors from third party applications in the Blue Button ecosystem. The certificate bundle can be retrieved from:
+
+
+{% highlight text %}
+https://secure.bluebuttontrust.org/bundle
+{% endhighlight %}
+
+The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle should be retrieved and loaded into the STA/HISP daily.
+
+#### Signing with EV Certificate
+Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. A data holder must ensure that one of the signing certificates is an extended validation (EV) certificate from a reputable vendor.
 
 #### Detailed Flow Diagram
 The following diagram depicts a successful transmission. See it [full-size](files/patient-transmit.pdf).

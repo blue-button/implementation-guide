@@ -19,21 +19,27 @@ When an STA is hosted externally, it is usually by a Health Information Services
 For Blue Button, your Direct STA must be able to:
 
 - ***Generate valid Direct addresses*** for your users and use cases. These may be [address-bound or organizationally-bound](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding).
-- ***Publish certificates*** for its addresses via DNSSEC. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
+- ***Publish certificates*** for its addresses via DNS or LDAP. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
+- ***Verify incoming messages*** to ensure they are proper Direct message and that they have been signed by an extended validation (EV) certificate.
 - ***Handle errors*** according to the applicability statement.
 
 Your application must be able to:
 
-- ***Receive decrypted/validated messages*** from the HISP/STA via its native interface. This interface with vary from component to component.
-- ***Be able to parse and represent the Blue Button information*** in a method appropriate for your users and use cases. 
+- ***Receive decrypted/validated messages*** from the HISP/STA via its native interface. This interface will vary from component to component.
+- ***Be able to parse and meaningfully represent the Blue Button information*** in a method appropriate for your users and use cases. 
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
+
+#### Detailed Flow Diagram
+The following diagram depicts a successful transmission. See it [full-size](files/patient-transmit.pdf).
+
+![Direct Transmit Flow Diagram](images/direct-transmit.png)
 
 ## 2. Blue Button Format and Payload
 
 Once your application has received the message and payload, it needs to process it. It needs to understand what files have been included. It also needs to handle cases where it receives multiple updates from the same user, over a period of time.
 
-As with all Direct messages, Blue Button messages that your application receives from the HISP component will be Internet-format Messages following RFC 5322 and Multipart MIME. Blue Button provides additional guidance on the contents of these messages to support a higher level of semantic exchange.
+As with all Direct messages, Blue Button messages that your application receives from the STA/HISP will be Internet-format Messages following RFC 5322 and Multipart MIME. Blue Button provides additional guidance on the contents of these messages to support a higher level of semantic exchange.
 
 Blue Button messages will contain:
 
@@ -41,42 +47,11 @@ Blue Button messages will contain:
 
 - ***A clinical summary*** containing a snapshot of the patient or member’s health history. The summary will be a [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html). This section will have a MIME type of application/xml.
 
-- ***Optional additional documents.*** These may include any relevant documents, images, or healthcare-specific items such as Transition of Care / Referral Summaries, Ambulatory Summaries or Inpatient Summaries. Below is a table that lists common MIME types for these formats, but the list is not meant to be exhaustive. 
+- ***Optional additional documents.*** These may include any relevant documents, images, or healthcare-specific items such as Transition of Care / Referral Summaries, Ambulatory Summaries or Inpatient Summaries.
 
 - A ***Request.txt*** that captures the context of the message in a semi-structured way.
 
-### A. MIME Types
-
-The following is a table of common MIME types that you may encounter.
-
-<table>
-	<tr>
-		<th class="table-column">Document</th>
-		<th class="table-column">MIME Type</th>
-	</tr>
-	<tr>
-		<th>Transition of Care Summary</th>
-		<td>application/xml</td>
-	</tr>
-	<tr class="odd">
-		<th>Ambulatory Summary</th>
-		<td>application/xml</td>
-	</tr>
-	<tr>
-		<th>Inpatient Summary</th>
-		<td>application/xml</td>
-	</tr>
-	<tr class="odd">
-		<th>JPEG Image</th>
-		<td>image/jpeg</td>
-	</tr>
-	<tr>
-		<th>...</th>
-		<td>...</td>
-	</tr>
-</table>
-
-### B. Anatomy of Request.txt
+### Anatomy of Request.txt
 In addition to the friendly message in the body, you may receive a ***request.txt***. This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
 
 {% highlight text %}
@@ -101,9 +76,21 @@ For a given address, there is the likelihood that your application will receive 
 
 This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button guidelines.
 
+## 4. Blue Button Trust Bundle
+You need to submit the trust anchor for your application to the ***Blue Button Trust Bundle*** in order for a data holder participating in the Blue Button ecosystem to send messages to Direct addresses issued by your application. Follow these steps:
+
+1. Visit [https://bluebuttontrust.org/register](https://bluebuttontrust.org/register)
+2. Register your application
+3. Demonstrate that your application is secured via SSL/HTTPS
+4. Provide a link to the Model Privacy Notice on your website or in your application
+
+Once your application's trust anchor is in the system, it will take 24-48 hours for data holders to sync your certificate.
+
+<!--
+
 ## 4. Best Practices for Accepting Direct Messages
 With Blue Button, we are encouraging a secure and open network of health information exchange on behalf of the patient. As a result, if your application becomes widely used, you may want to start using white and black lists to help prioritize and control messages that your application is receiving. You can also do this based on the trust anchors of the certificates used to sign messages that you are receiving.
-
+-->
 
 <!--
 
