@@ -13,6 +13,10 @@ The Consolidated CDA is a XML-based standard that specifies the encoding, struct
 
 There are a wide-range of templates that can be represented in the Consolidated CDA standard. For Blue Button we are outlining a subset set of sections and fields that should be used.
 
+## 0. Tools for working with Consolidated CDA
+
+* [NIST Validator Web App](http://transport-testing.nist.gov/ttt/)
+
 ## 1. Sections
 Blue Button adopts the requirements for sections and fields from Meaningful Use Stage 2. When ever a patient health record is generated, it should have the following fields, if they exist in the dataholders system:
 
