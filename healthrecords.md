@@ -13,6 +13,10 @@ The Consolidated CDA is a XML-based standard that specifies the encoding, struct
 
 There are a wide-range of templates that can be represented in the Consolidated CDA standard. For Blue Button we are outlining a subset set of sections and fields that should be used.
 
+## 0. Tools for working with Consolidated CDA
+
+* [NIST Validator Web App](http://transport-testing.nist.gov/ttt/)
+
 ## 1. Sections
 Blue Button adopts the requirements for sections and fields from Meaningful Use Stage 2. When ever a patient health record is generated, it should have the following fields, if they exist in the dataholders system:
 
@@ -2725,12 +2729,12 @@ PROBLEM LIST
                         codeSystem="2.16.840.1.113883.5.6"
                         displayName="Concern"/>
                      <statusCode
-                        code="completed"/>
+                        code="active"/>
                      <effectiveTime>
                         <low
                            value="20120806"/>
                         <high
-                           value="20120806"/>
+                           value="20120813"/>
                      </effectiveTime>
                      <entryRelationship
                         typeCode="SUBJ">
@@ -2753,45 +2757,14 @@ PROBLEM LIST
                            <statusCode
                               code="completed"/>
                            <effectiveTime>
-                              <low
-                                 value="20120806"/>
+                              <low value="20120806"/>
+                              <high value="20120813"/>
                            </effectiveTime>
                            <value
                               xsi:type="CD"
                               code="233604007"
                               codeSystem="2.16.840.1.113883.6.96"
                               displayName="Pneumonia"/>
-                           <entryRelationship
-                              typeCode="REFR">
-                              <observation
-                                 classCode="OBS"
-                                 moodCode="EVN">
-                                 <!-- Problem observation template -->
-                                 <templateId
-                                    root="2.16.840.1.113883.10.20.22.4.68"/>
-                                 <id
-                                    root="ab1791b0-5c71-11db-b0de-0800200c9a66"/>
-                                 <code
-                                    code="409586006"
-                                    codeSystem="2.16.840.1.113883.6.96"
-                                    displayName="Complaint"/>
-                                 <text>
-                                    <reference
-                                       value="#problem1"/>
-                                 </text>
-                                 <statusCode
-                                    code="completed"/>
-                                 <effectiveTime>
-                                    <low
-                                       value="20120806"/>
-                                 </effectiveTime>
-                                 <value
-                                    xsi:type="CD"
-                                    code="233604007"
-                                    codeSystem="2.16.840.1.113883.6.96"
-                                    displayName="Pneumonia"/>
-                              </observation>
-                           </entryRelationship>
                            <entryRelationship
                               typeCode="SUBJ"
                               inversionInd="true">
@@ -2880,8 +2853,6 @@ PROBLEM LIST
                      <effectiveTime>
                         <low
                            value="20070103"/>
-                        <high
-                           value="20120806"/>
                      </effectiveTime>
                      <entryRelationship
                         typeCode="SUBJ">
@@ -2913,37 +2884,6 @@ PROBLEM LIST
                               codeSystem="2.16.840.1.113883.6.96"
                               displayName="Asthma"/>
                            <entryRelationship
-                              typeCode="REFR">
-                              <observation
-                                 classCode="OBS"
-                                 moodCode="EVN">
-                                 <!-- Problem observation template -->
-                                 <templateId
-                                    root="2.16.840.1.113883.10.20.22.4.68"/>
-                                 <id
-                                    root="ab1791b0-5c71-11db-b0de-0800200c9a66"/>
-                                 <code
-                                    code="409586006"
-                                    codeSystem="2.16.840.1.113883.6.96"
-                                    displayName="Complaint"/>
-                                 <text>
-                                    <reference
-                                       value="#problem2"/>
-                                 </text>
-                                 <statusCode
-                                    code="completed"/>
-                                 <effectiveTime>
-                                    <low
-                                       value="20120806"/>
-                                 </effectiveTime>
-                                 <value
-                                    xsi:type="CD"
-                                    code="195967001"
-                                    codeSystem="2.16.840.1.113883.6.96"
-                                    displayName="Asthma"/>
-                              </observation>
-                           </entryRelationship>
-                           <entryRelationship
                               typeCode="SUBJ"
                               inversionInd="true">
                               <observation
@@ -2960,7 +2900,7 @@ PROBLEM LIST
                                     code="completed"/>
                                  <value
                                     xsi:type="PQ"
-                                    value="65"
+                                    value="59"
                                     unit="a"/>
                               </observation>
                            </entryRelationship>
@@ -3565,16 +3505,8 @@ SOCIAL HISTORY
                         <tr>
                            <td>
                               <content
-                                 ID="soc1"/> smoking</td>
-                           <td>Former Smoker (1 pack per day</td>
-                           <td>20050501 to 20110227</td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <content
-                                 ID="soc2"/> smoking</td>
-                           <td>Current Everyday Smoker 2 packs per day</td>
-                           <td>20110227 - today</td>
+                                 ID="smok1"/> Former smoker (smoked from 2005-2011)
+                           </td>
                         </tr>
                      </tbody>
                   </table>
@@ -3605,70 +3537,6 @@ SOCIAL HISTORY
                         xsi:type="CD"
                         code="8517006"
                         displayName="Former smoker"
-                        codeSystem="2.16.840.1.113883.6.96"/>
-                  </observation>
-               </entry>
-               <entry
-                  typeCode="DRIV">
-                  <observation
-                     classCode="OBS"
-                     moodCode="EVN">
-                     <templateId
-                        root="2.16.840.1.113883.10.20.22.4.38"/>
-                     <!--  ********  Social history observation template   ******** -->
-                     <id
-                        root="9b56c25d-9104-45ee-9fa4-e0f3afaa01c1"/>
-                     <code
-                        code="230056004"
-                        codeSystem="2.16.840.1.113883.6.96"
-                        displayName="Cigarette smoking">
-                        <originalText>
-                           <reference
-                              value="#soc1"/>
-                        </originalText>
-                     </code>
-                     <statusCode
-                        code="completed"/>
-                     <effectiveTime>
-                        <low
-                           value="20050501"/>
-                        <high
-                           value="20110227"/>
-                     </effectiveTime>
-                     <value
-                        xsi:type="ST">1 pack per day</value>
-                  </observation>
-               </entry>
-               <entry
-                  typeCode="DRIV">
-                  <observation
-                     classCode="OBS"
-                     moodCode="EVN">
-                     <templateId
-                        root="2.16.840.1.113883.10.20.22.4.38"/>
-                     <!--  ********  Social history observation template   ******** -->
-                     <id
-                        root="45efb604-7049-4a2e-ad33-d38556c9636c"/>
-                     <code
-                        code="230056004"
-                        codeSystem="2.16.840.1.113883.6.96"
-                        displayName="Cigarette smoking">
-                        <originalText>
-                           <reference
-                              value="#soc2"/>
-                        </originalText>
-                     </code>
-                     <statusCode
-                        code="completed"/>
-                     <effectiveTime>
-                        <low
-                           value="20110227"/>
-                        <high nullFlavor="UNK"/>
-                     </effectiveTime>
-                     <value
-                        xsi:type="CD"
-                        code="449868002"
-                        displayName="Current Everyday Smoker"
                         codeSystem="2.16.840.1.113883.6.96"/>
                   </observation>
                </entry>
