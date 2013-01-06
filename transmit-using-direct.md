@@ -80,7 +80,7 @@ Your STA/HISP will need a set of trust anchors in order to transmit Direct messa
 
 
 {% highlight text %}
-https://secure.bluebuttontrust.org/bundle
+https://secure.bluebuttontrust.org
 {% endhighlight %}
 
 The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle should be retrieved and loaded into the STA/HISP daily.

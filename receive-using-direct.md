@@ -79,7 +79,7 @@ This is beneficial for your application, because it will be getting an up-to-dat
 ## 4. Blue Button Trust Bundle
 You need to submit the trust anchor for your application to the ***Blue Button Trust Bundle*** in order for a data holder participating in the Blue Button ecosystem to send messages to Direct addresses issued by your application. Follow these steps:
 
-1. Visit [https://bluebuttontrust.org/register](https://bluebuttontrust.org/register)
+1. Visit [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org)
 2. Register your application
 3. Demonstrate that your application is secured via SSL/HTTPS
 4. Provide a link to the Model Privacy Notice on your website or in your application

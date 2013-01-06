@@ -71,7 +71,7 @@
 		font-family:  "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, sans-serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+	h1 { font-size: 32px; line-height: 50px; margin-bottom: 14px; color: #3f7dad;}
 	h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px;}
 	h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
 	h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
