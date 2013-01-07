@@ -162,6 +162,13 @@ Data-holder: Ashby Medical Center
 Recurring: Yes
 {% endhighlight %}
 
+### G. Workflow
+
+Two sets of storyboard have been drafted to match the key user flows: (1) within the patient portal and (2) within the provider's EHR interface.
+
+![Patient Portal](images/transmit-workflow-1.jpg)
+
+
 <!--
 ## 2. Workflow
 
