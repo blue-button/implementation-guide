@@ -82,7 +82,7 @@ You need to submit the trust anchor for your application to the ***Blue Button T
 1. Visit [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org)
 2. Register your application
 3. Demonstrate that your application is secured via SSL/HTTPS
-4. Provide a link to the [http://healthit.hhs.gov/phr_privacy](Model Privacy Notice) on your website or in your application
+4. Provide a link to the [Model Privacy Notice](http://healthit.hhs.gov/phr_privacy) on your website or in your application
 
 Once your application's trust anchor is in the system, it will take 24-48 hours for data holders to sync your certificate.
 
