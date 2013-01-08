@@ -61,7 +61,7 @@ Yes.  Covered entities (including health care providers) are permitted to requir
 A covered entity is not responsible for safeguarding e-PHI once it has been delivered to the destination designated by the individual. 
 
 
-### Not in use case, but requested.
+***Not in use case, but requested.***
 
 ***Does an individual have a right of access to claims and other payment information about the individual maintained by a health plan?***
 
