@@ -323,6 +323,29 @@ td{
 	color: #FFF;
 }
 
+.quick-link{
+	background-color: #397dae;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+.point .quick-link p, .point .quick-link a{
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 0px;
+	color: #FFF;
+}
+
+.point .quick-link a:hover{
+	color: #cacaca;
+}
+
+.point .num{
+	margin-right: 10px;
+	color: #cacaca;
+}
+
 
 /* #Override
 ================================================== */
@@ -358,4 +381,19 @@ td{
 
 a em{
 	color:#447DAC;
+}
+
+.point{
+	background-color: #f5f8fb;
+	padding: 20px;
+}
+
+.pointer h3{
+	font-weight: normal;
+	font-size: 20px;
+	text-align: center;
+}
+
+.pointer p{
+	text-align: center;
 }

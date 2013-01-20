@@ -5,41 +5,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-	<link rel="stylesheet" href="stylesheets/pygments.css">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
+{% include head.html %}
 
 </head>
 <body>
@@ -52,11 +18,7 @@
 	<!-- Delete everything in this .container and get started on your own site! -->
 
 	<div class="container">
-		<div class="sixteen columns">
-			<h3 class="remove-bottom title" style="margin-top: 40px"><a href="index.html">Blue Button Plus Implementation Guide</a></h3>
-			<h6>January 10, 2013 - Developer Preview</h6>
-			<hr />
-		</div>
+		{% include title.html %}
 
 		{% include nav.html %}
 
@@ -68,7 +30,9 @@
 	</div><!-- container -->
 
 
-<!-- End Document
-================================================== -->
+	{% include getsat.html %}
+
+	<!-- End Document
+	================================================== -->
 </body>
 </html>
