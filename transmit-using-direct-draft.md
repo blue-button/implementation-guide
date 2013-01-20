@@ -122,7 +122,7 @@ When a transmission occurs, the following should be part of the payload as a mul
 #### 1. Clinical Summary
 The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history.
 
-The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml.
+The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
 
 #### 2. Additional Documents
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
@@ -175,55 +175,3 @@ Storyboards have been drafted to match the key user flows described above: (1) w
 ![Provider Interface](images/transmit-workflow-3.jpg)
 
 ![Provider Interface - Revoke](images/transmit-workflow-4.jpg)
-
-
-
-<!--
-## 2. Workflow
-
-We have created two sets of storyboards that match the 2 key user flows. The first is within the patient portal and the second is in the provider's interface. These sketches are just examples of how transmitting using Direct could be implemented.
-
-### A. Patient Portal
-
-In this first flow, a patient uses the patient portal to send his/her record to a Direct address. This flow assumes a patient knows how to interact with the patient portal.
-
-***1. Patient logs into the patient portal***
-
-![Patient logs in](images/patient-1.png)
-
-***2. Patient clicks on "Share with Direct"***
-
-![Patient clicks share with Direct](images/patient-2.png)
-
-***3. Patient reads and accepts transmit terms***
-
-![Patient reads and accepts transmit terms](images/patient-3.png)
-
-***4. Patient enters Direct address and selects transmit frequency***
-
-![Patient enters Direct address](images/patient-4.png)
-
-After clicking ***Share*** the patient will have successfully transmitted his/her record.
-
-### B. Provider Setting (EMR)
-
-In this second flow, we describe how a patient can ask their provider to setup the transmission of his/her record. This assumes that the provider has received authorization and instructions from the patient.
-
-***1. Provider accesses patient record***
-
-![Provider accesses patient record](images/provider-1.png)
-
-In the sketch above, we present a Direct address much like we would an Email address. There's a section for ***Direct Address*** and a button to add more. This action associates a Direct address with a patient's record (See 2A).  There's also a ***Share*** button on the top right to facilitate a one-time share (See 2B).
-
-***2A. Provider adds the Direct address and selects the send frequency.***
-
-Clicking on ***Add*** under ***Direct Address*** will show this screen:
-
-![Adding a Direct Addresss](images/provider-2.png)
-
-***2B. Provider adds the Direct address and selects the send frequency.***
-
-Clicking on ***Share*** on the top right will show this screen:
-
-![One Time Send](images/provider-3.png)
--->
