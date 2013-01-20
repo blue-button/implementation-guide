@@ -76,7 +76,7 @@ For a given address, there is the likelihood that your application will receive 
 
 This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button guidelines.
 
-## 4. Blue Button Trust Bundle
+## 4. Blue Button Trust Bundle {#bundle}
 You need to submit the trust anchor for your application to the ***Blue Button Trust Bundle*** in order for a data holder participating in the Blue Button ecosystem to send messages to Direct addresses issued by your application. Follow these steps:
 
 1. Visit [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org)
