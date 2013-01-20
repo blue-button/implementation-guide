@@ -52,7 +52,7 @@ Blue Button+ describes a few minor additions to VDT that ensures patients can tr
 		<td>Yes</td>
 		<td>Yes</td>
 	</tr>
-	<tr>
+	<tr class="odd">
 		<th>Transmit: Send Once</th>
 		<td>Yes</td>
 		<td>Yes</td>
