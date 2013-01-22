@@ -27,6 +27,8 @@ The patient needs to be able to download a package that is human-readable and ma
 ### Required for MU 2
 The required content for ***download*** will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history. The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml.
 
+If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
+
 To ensure human-readability, make sure the patient can download a stylesheet along with the Consolidated CDA. The file type is application/xslt.
 
 ### Human-Readable Options
