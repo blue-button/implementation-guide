@@ -3,13 +3,12 @@ layout: default
 title: Achieving MU 2 VDT Requirement with Blue Button
 ---
 
-# VDT and Blue Button+
+# V/D/T and Blue Button+
 
-This section is under development.
+As a dataholder, by implementing Blue Button+, you will be meeting the requirements of View, Download, and Transmit (V/D/T) in Meaningful Use Stage 2.
 
-As a data holder, by implementing Blue Button+, you will be meeting the requirements of View, Download, and Transmit in Meaningful Use Stage 2. 
+Blue Button+ gives specific guidance to dataholders in meeting the V/D/T requirements. In doing so, it describes a few minor clarifications and additions to V/D/T that ensures patients can transmit their records to third party applications of their choice.
 
-Blue Button+ describes a few minor additions to VDT that ensures patients can transmit their records to third party applications of their choice.
 
 <table>
 	<tr>
@@ -34,7 +33,7 @@ Blue Button+ describes a few minor additions to VDT that ensures patients can tr
 	</tr>
 	<tr class="odd">
 		<th>Trust Anchors</th>
-		<td>-</td>
+		<td>Ad Hoc Trust Relationships</td>
 		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
 	</tr>
 	<tr>
