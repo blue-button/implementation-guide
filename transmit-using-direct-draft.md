@@ -86,9 +86,13 @@ https://secure.bluebuttontrust.org
 The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle should be retrieved and loaded into the STA/HISP daily.
 
 #### Signing with a Certificate
-Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. A set of trust communities like [Direct Trust](http://directtrust.org) will establish their trust bundles and you will be able to sign messages with those certificates. If you are not participating in one of those communities, then one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
+Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. 
 
-Between Jan - June 2013, if you are just performing trials and demonstrations, you have the option of submitting your anchor to the ***Providers-Test*** [Blue Button Trust Bundle](https://secure.bluebuttontrust.org/).
+The preferred path is to use a anchor that is part of a trust communities like [Direct Trust](http://directtrust.org). These communities will establish trust bundles and you will be able to sign messages with those certificates. 
+
+If you are not participating in one of those communities, then one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
+
+For testing, you can upload your anchor to the ***Providers-Test*** [Blue Button Trust Bundle](https://secure.bluebuttontrust.org/). For production, you will need to participate in a trust community or sign the message with an EV certificate.
 
 #### Detailed Flow Diagram
 The following diagram depicts a successful transmission. See it [full-size](files/patient-transmit.pdf).
