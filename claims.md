@@ -3,7 +3,7 @@ layout: default
 title: Content Format for Medical Claims
 ---
 
-# Content Format for Medical Claims
+# Content Format for Financial Data (Medical Claims)
 
 There is a workgroup actively working on describing how medical claims data should be structured. If this is an area that is relevant to you or your company, participate in the [ABBI Workgroup for Payer Content](http://wiki.siframework.org/ABBI+Payers+Workgroup).
 
