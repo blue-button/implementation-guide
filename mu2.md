@@ -34,7 +34,7 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
 	<tr class="odd">
 		<th>Trust Anchors</th>
 		<td>Manual Anchor Exchange</td>
-		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
+		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a> – a way to support MU 2 V/D/T that makes it more scalable and easier to communicate with Third Party Applications</td>
 	</tr>
 	<tr>
 		<th>Certificate Discovery</th>
