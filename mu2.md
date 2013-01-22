@@ -33,7 +33,7 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
 	</tr>
 	<tr class="odd">
 		<th>Trust Anchors</th>
-		<td>Ad Hoc Trust Relationships</td>
+		<td>Manual Anchor Exchange</td>
 		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
 	</tr>
 	<tr>
