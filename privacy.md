@@ -5,12 +5,12 @@ title: Best Practices for Transmitting Data
 
 # Privacy and Security
 
-These are Blue Button privacy and security related questions that came from the ABBI workgroup.
+The U.S. Department of Health and Human Services’ Office for Civil Rights and Office of the National Coordinator have compiled the following document from existing policy guidance, in response to questions related to the Automate Blue Button Initiative. This document will be periodically expanded upon, as more questions arise that we can address with existing guidance. 
 
-## Background
-We are working on a new implementation guide for the Blue Button, which will encourage dataholders (health care providers and health plans) to provide patients (“individuals”) an electronic copy of their health data in a machine-readable format in accordance with privacy and security best practices.  
+##Background
 
-Blue Button functionality provides data that is formatted in a consolidated continuity of care document (consolidated CCD).  A consolidated CCD contains a subset of protected health information (PHI) maintained in an individual’s medical records and therefore is a subset of a designated record set. Accordingly, under the HIPAA Privacy Rule, the individual who is the subject of the PHI has a right of access to the PHI in the consolidated CCD. (We recognize that individuals continue to have the right to request and receive all their PHI in the medical records outside of the consolidated CCD or Blue Button function.)  For ease of reference, we will call the PHI in a consolidated CCD “Blue Button health information” in our Use Cases and Questions and Answers  below.
+Blue Button functionality provides data that follows Meaningful Use Stage 2’s requirements for sections and fields, formatted in  Consolidated Clinical Document Architecture (Consolidated CDA).  A Consolidated CDA contains a subset of protected health information (PHI) maintained in an individual’s medical records and therefore is a subset of a designated record set. Accordingly, under the HIPAA Privacy Rule, the individual who is the subject of the PHI has a right of access to the PHI in the Consolidated CDA. (We recognize that individuals continue to have the right to request and receive all their PHI in the medical records outside of the Consolidated CDA or Blue Button function.)  For ease of reference, we will call the PHI in a Consolidated CDA “Blue Button health information” in our Use Cases and Questions and Answers  below.
+
 
 DIRECT is a set of technical specifications that allow providers and individuals to securely transmit PHI electronically. It is similar to e-mail, in that providers and patients each have “DIRECT addresses” that allow them to communicate with each other, but is more secure than regular e-mail.  For example, a John Q. Public could have a Direct address (JohnQPublic@direct.healthvault.com). Meaningful Use Stage 2 requires every certified Electronic Health Record system to be able to send messages to DIRECT addresses.
 
@@ -39,7 +39,7 @@ Yes. The Privacy Rule allows covered entities (including health care providers) 
 
 As a practical matter, requiring that such requests be in writing may reduce errors and may serve as the covered entity’s record of the e-mail or Direct address to which the individual requested their information be sent.
 
-***3.	If an individual requests a machine-readable consolidated CCD and the health care provider is able to readily furnish a copy in that format, must the provider furnish the copy of the CCD in this requested format?***
+***3.	If an individual requests a machine-readable Consolidated CDA and the health care provider is able to readily furnish a copy in that format, must the provider furnish the copy of the data in this requested format?***
 
 Yes. The Privacy Rule requires covered entities (including health care providers) to provide access to the PHI in the form or format requested by the individual if it is readily producible in such form or format. See 45 C.F.R. § 164.524(c)(2).
 
