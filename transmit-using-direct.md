@@ -14,7 +14,7 @@ Examples of data holder systems include: provider's EHR, health insurance claims
 ## 1. Technical
 
 ### A. Authentication
-A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials. In the case of a live interaction with the patient or their authorized representative, the provider is responsible for "in-person" identity validation.
+A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials.  In the case of a live interaction identity validation may be needed, and can be obtained orally or in writing., If the provider already knows the individual, no additional steps are needed to verify the individual’s identity.
 
 These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit in Meaningful Use Stage 2. 
 
@@ -68,14 +68,14 @@ For Blue Button, a STA must be able to:
 - ***Use Encryption Certificates***: A STA must [discover certificates via DNS or LDAP](https://docs.google.com/document/d/1igDpIizm7CTfV-fUw_1EnrCUGIljFEgLPRHpgK5iaec/edit) to encrypt messages
 - ***Validate Certificates***: Certificates must be valid [Direct Address or Organizationally Bound Certificates](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding)
 - ***Trust Anchor Bundle***: A STA should automatically retrieve the latest Blue Button trust bundle
-- ***Sign Messages w. EV Certificate***: Outbound message should also be signed by an Extended Validation (EV) certificate
+- ***Sign Messages w. Certificate***: Outbound messages should be [signed by a certificate](#certificates).
 - ***Handle Errors***: Provide [error codes/responses](http://wiki.directproject.org/file/view/Implementation+Guide+for+Delivery+Notification+in+Direct+2012060601.pdf/343915016/Implementation%20Guide%20for%20Delivery%20Notification%20in%20Direct%202012060601.pdf) to the data holder's system
 
 Your system will communicate the payload and destination Direct address to a STA/HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
 See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
-#### Retrieving Blue Button Trust Bundle {#bundle}
+#### Retrieving Blue Button Trust Bundle
 Your STA/HISP will need a set of trust anchors in order to transmit Direct messages. This bundle includes the trust anchors from third party applications in the Blue Button ecosystem. The certificate bundle can be retrieved from:
 
 
@@ -85,8 +85,14 @@ https://secure.bluebuttontrust.org
 
 The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle should be retrieved and loaded into the STA/HISP daily.
 
-#### Signing with EV Certificate
-Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. A data holder must ensure that one of the signing certificates is an extended validation (EV) certificate from a reputable vendor.
+#### Signing with a Certificate {#certificates}
+Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. 
+
+The preferred path is to use a anchor that is part of a trust communities like [Direct Trust](http://directtrust.org). These communities will establish trust bundles and you will be able to sign messages with those certificates. 
+
+If you are not participating in one of those communities, then one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
+
+For testing, you can upload your anchor to the ***Providers-Test*** [Blue Button Trust Bundle](https://secure.bluebuttontrust.org/). For production, you will need to participate in a trust community or sign the message with an EV certificate.
 
 #### Detailed Flow Diagram
 The following diagram depicts a successful transmission. See it [full-size](files/patient-transmit.pdf).
@@ -120,7 +126,7 @@ When a transmission occurs, the following should be part of the payload as a mul
 #### 1. Clinical Summary
 The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history.
 
-The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml.
+The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
 
 #### 2. Additional Documents
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:

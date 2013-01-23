@@ -20,7 +20,7 @@ For Blue Button, your Direct STA must be able to:
 
 - ***Generate valid Direct addresses*** for your users and use cases. These may be [address-bound or organizationally-bound](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding).
 - ***Publish certificates*** for its addresses via DNS or LDAP. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
-- ***Verify incoming messages*** to ensure they are proper Direct message and that they have been signed by an extended validation (EV) certificate.
+- ***Verify incoming messages*** to ensure they are proper Direct message and that they have been signed by an appropriate certificate from a trust community or an extended validation (EV) certificate. These ***Provider*** anchors can be found at [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org).
 - ***Handle errors*** according to the applicability statement.
 
 Your application must be able to:
