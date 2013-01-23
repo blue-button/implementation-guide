@@ -14,7 +14,7 @@ Examples of data holder systems include: provider's EHR, health insurance claims
 ## 1. Technical
 
 ### A. Authentication
-A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials. In the case of a live interaction with the patient or their authorized representative, the provider is responsible for "in-person" identity validation.
+A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials.  In the case of a live interaction identity validation may be needed, and can be obtained orally or in writing., If the provider already knows the individual, no additional steps are needed to verify the individual’s identity.
 
 These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit in Meaningful Use Stage 2. 
 
