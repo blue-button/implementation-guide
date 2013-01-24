@@ -5,9 +5,11 @@ title: Content Format for Medical Claims
 
 # Content Format for Medical Claims
 
-There is a workgroup actively working on describing how medical claims data should be structured.
+Blue Button files from health plans typically come from administrative claims databases, as well as potentially self-entered data on Personal Health Records.
+ 
+Data made available to patients via Blue Button+ should be human-readable and formatted in a way that is “machine readable” for third party applications. This section includes recommended data elements and structure, and format options for providing that data to a patient.
 
-If this is an area that is relevant to you or your company, participate in the ABBI [Workgroup for Payer Content](http://wiki.siframework.org/ABBI+Payers+Workgroup).
+To the extent that data holders already have useful and meaningful electronic health data for consumers' Blue Button files, including from administrative claims data, the following Data Fields are recommended for inclusion in the Blue Button+ files. The file should should be as consistent as possible – in both structure and content – with the Medicare Blue Button file (available here).
 
 ## 1. Sections
 Text describing where these sections come from. Medicare data. X12 data.
@@ -142,11 +144,11 @@ The follow is the XML representation:
 {% endhighlight %}
 
 
-<!--
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8" ?>
-<blue_button_claims>
+### Claims Details
 
+The follow is the XML representation:
+
+{% highlight xml %}
    <claims>
       <claim>0210336239290</claim>
       <type>Part B</type>
@@ -242,7 +244,14 @@ The follow is the XML representation:
          <rendering_provider_npi>1023062544</rendering_provider_npi>
       </details>
    </claims>
-   <claims>
+ {% endhighlight %}
+
+ ### Prescription Claims
+
+ The follow is the XML representation:
+
+ {% highlight xml %}
+    <claims>
       <claim>000000123456</claim>
       <type>Part D</type>
       <pharmacy>
@@ -264,7 +273,4 @@ The follow is the XML representation:
          <name>Harvey, A. McGehee</name>
       </prescriber>
    </claims>
-</blue_button_claims>
  {% endhighlight %}
-
--->
