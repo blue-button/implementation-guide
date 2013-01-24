@@ -23,28 +23,23 @@ Text describing where these sections come from. Medicare data. X12 data.
    <tr>
       <th>Payer &amp; Coverage Information</th>
       <td>...</td>
-      <td><a href="#header">Jump to Section</a></td>
+      <td><a href="#payer">Jump to Section</a></td>
    </tr>
    <tr class="odd">
       <th>Patient Information</th>
       <td>...</td>
-      <td><a href="#allergies">Jump to Section</a></td>
-   </tr>
-   <tr>
-      <th>Provider Information</th>
-      <td>...</td>
-      <td><a href="#encouters">Jump to Section</a></td>
+      <td><a href="#patient">Jump to Section</a></td>
    </tr>
    <tr class="odd">
-      <th>Claims Details</th>
+      <th>Claims</th>
       <td>...</td>
-      <td><a href="#encouters">Jump to Section</a></td>
+      <td><a href="#claims">Jump to Section</a></td>
    </tr>
 </table>
 
 ## 2. Breakdown of XML
 
-### Payer & Coverage Information
+### Payer & Coverage Information {#payer}
 
 <table>
    <tr>
@@ -109,7 +104,7 @@ The following is the XML representation:
    </payer>
 {% endhighlight %}
 
-### Patient Information
+### Patient Information {#patient}
 
 <table>
    <tr>
@@ -139,13 +134,13 @@ The following is the XML representation:
 {% endhighlight %}
 
 
-### Claims Details
+### Claims Details {#claims}
 
 There are two level of details for each claim.
 1. Summary of the claim
 2. Detailed breakdown of the claim
 
-#### Summary of the Claim
+#### Summary of the Claim {#summary-of-claim}
 
 <table>
    <tr>
@@ -196,7 +191,7 @@ There are two level of details for each claim.
 </table>
 
 
-#### Claim Details
+#### Claim Details {#claim-details}
 
 The following is the XML representation:
 
@@ -379,7 +374,7 @@ The following is the XML representation:
  {% endhighlight %}
 
 
-### Prescription Claims
+### Prescription Claims {#prescription-claim}
 
 Claims for prescriptions.
 
