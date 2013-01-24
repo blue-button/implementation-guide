@@ -53,17 +53,22 @@ Text describing where these sections come from. Medicare data. X12 data.
       <th class="table-column">Example</th>
    </tr>
    <tr>
-      <th>Payer name</th>
+      <th>Name</th>
       <td>...</td>
       <td>Medicare</td>
    </tr>
    <tr>
-      <th>Payer ID type</th>
+      <th>Payer ID</th>
       <td>...</td>
       <td>...</td>
    </tr>
    <tr>
-      <th>Payer ID code</th>
+      <th>Payer ID Type</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Plan Name</th>
       <td>...</td>
       <td>...</td>
    </tr>
@@ -73,27 +78,17 @@ Text describing where these sections come from. Medicare data. X12 data.
       <td>...</td>
    </tr>
    <tr>
-      <th>Payer website</th>
+      <th>Member Name</th>
       <td>...</td>
       <td>...</td>
    </tr>
    <tr>
-      <th>Eligibility period start date</th>
+      <th>Member ID</th>
       <td>...</td>
       <td>...</td>
    </tr>
    <tr>
-      <th>Eligibility period end date</th>
-      <td>...</td>
-      <td>...</td>
-   </tr>
-   <tr>
-      <th>Plan Type</th>
-      <td>...</td>
-      <td>...</td>
-   </tr>
-   <tr>
-      <th>Primary Insurance vs. Secondary</th>
+      <th>Website</th>
       <td>...</td>
       <td>...</td>
    </tr>
@@ -146,7 +141,87 @@ The follow is the XML representation:
 
 ### Claims Details
 
+There are two level of details for each claim.
+1. Summary of the claim
+2. Detailed breakdown of the claim
+
+#### Summary of the Claim
+
+<table>
+   <tr>
+      <th class="table-column">Field</th>
+      <th class="table-column">Description</th>
+      <th class="table-column">Example</th>
+   </tr>
+   <tr>
+      <th>Claim Number</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Type of Claim</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Provider Details</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Date</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Charges</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Procedures</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Diagnosis</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Details</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+</table>
+
+
+#### Claim Details
+
 The follow is the XML representation:
+
+<table>
+   <tr>
+      <th class="table-column">Field</th>
+      <th class="table-column">Description</th>
+      <th class="table-column">Example</th>
+   </tr>
+   <tr>
+      <th>Claim Number</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Type of Claim</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Provider Details</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+</table>
 
 {% highlight xml %}
    <claims>
@@ -246,11 +321,12 @@ The follow is the XML representation:
    </claims>
  {% endhighlight %}
 
- ### Prescription Claims
 
- The follow is the XML representation:
+### Prescription Claims
 
- {% highlight xml %}
+The follow is the XML representation:
+
+{% highlight xml %}
     <claims>
       <claim>000000123456</claim>
       <type>Part D</type>
@@ -273,4 +349,4 @@ The follow is the XML representation:
          <name>Harvey, A. McGehee</name>
       </prescriber>
    </claims>
- {% endhighlight %}
+{% endhighlight %}
