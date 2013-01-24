@@ -118,7 +118,7 @@ The follow is the XML representation:
       <th class="table-column">Example</th>
    </tr>
    <tr>
-      <th>Patient Name</th>
+      <th>Name</th>
       <td>...</td>
       <td>Ellen Harrision Lu</td>
    </tr>
@@ -207,17 +207,77 @@ The follow is the XML representation:
       <th class="table-column">Example</th>
    </tr>
    <tr>
-      <th>Claim Number</th>
+      <th>Start Date</th>
       <td>...</td>
       <td>...</td>
    </tr>
    <tr>
-      <th>Type of Claim</th>
+      <th>End Date</th>
       <td>...</td>
       <td>...</td>
    </tr>
    <tr>
-      <th>Provider Details</th>
+      <th>Procedure Code</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Procedure Description</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Modifiers</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Quantity</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Price Billed</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Insurance Approved</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Patient Responsibility</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Place of Service</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Place of Service Code</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Type of Service</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Typer of Service Code</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Rendering Provider Number</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Rendering Provider NPI</th>
       <td>...</td>
       <td>...</td>
    </tr>
@@ -239,7 +299,7 @@ The follow is the XML representation:
       </date>
       <charges>
          <price_billed>1022.5</price_billed>
-         <negotiated_price>782.33</negotiated_price>
+         <insurance_approved>782.33</insurance_approved>
          <insurance_paid>625.86</insurance_paid>
          <patient_responsibility>156.47</patient_responsibility>
       </charges>
@@ -271,7 +331,7 @@ The follow is the XML representation:
          </modifiers>
          <quantity>1</quantity>
          <price_billed>275</price_billed>
-         <negotiated_price>208.99</negotiated_price>
+         <insurance_approved>208.99</insurance_approved>
          <patient_responsibility>66.01</patient_responsibility>
          <place_of_service_code>41</place_of_service_code>
          <place_of_service>Ambulance - Land</place_of_service>
@@ -290,7 +350,7 @@ The follow is the XML representation:
          </modifiers>
          <quantity>1</quantity>
          <price_billed>275</price_billed>
-         <negotiated_price>208.99</negotiated_price>
+         <insurance_approved>208.99</insurance_approved>
          <patient_responsibility>66.01</patient_responsibility>
          <place_of_service_code>41</place_of_service_code>
          <place_of_service>Ambulance - Land</place_of_service>
@@ -309,7 +369,7 @@ The follow is the XML representation:
          </modifiers>
          <quantity>44</quantity>
          <price_billed>472.5</price_billed>
-         <negotiated_price>364.35</negotiated_price>
+         <insurance_approved>364.35</insurance_approved>
          <patient_responsibility>108.15</patient_responsibility>
          <place_of_service_code>41</place_of_service_code>
          <place_of_service>Ambulance - Land</place_of_service>
