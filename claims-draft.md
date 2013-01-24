@@ -9,7 +9,7 @@ Blue Button files from health plans typically come from administrative claims da
  
 Data made available to patients via Blue Button+ should be human-readable and formatted in a way that is “machine readable” for third party applications. This section includes recommended data elements and structure, and format options for providing that data to a patient.
 
-To the extent that data holders already have useful and meaningful electronic health data for consumers' Blue Button files, including from administrative claims data, the following Data Fields are recommended for inclusion in the Blue Button+ files. The file should should be as consistent as possible – in both structure and content – with the Medicare Blue Button file (available here).
+To the extent that data holders already have useful and meaningful electronic health data for consumers' Blue Button files, including from administrative claims data, The followinging Data Fields are recommended for inclusion in the Blue Button+ files. The file should should be as consistent as possible – in both structure and content – with the Medicare Blue Button file (available here).
 
 ## 1. Sections
 Text describing where these sections come from. Medicare data. X12 data.
@@ -94,7 +94,7 @@ Text describing where these sections come from. Medicare data. X12 data.
    </tr>
 </table>
 
-The follow is the XML representation:
+The following is the XML representation:
 
 {% highlight xml %}
    <payer>
@@ -129,7 +129,7 @@ The follow is the XML representation:
    </tr>
 </table>
 
-The follow is the XML representation:
+The following is the XML representation:
 
 {% highlight xml %}
    <patient>
@@ -179,13 +179,13 @@ There are two level of details for each claim.
       <td>...</td>
    </tr>
    <tr>
-      <th>Procedures</th>
-      <td>Name of Service, Code System Name, Code System Code, Service Code</td>
+      <th>Service</th>
+      <td>Name of Service, Code System Name, Service Code</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Diagnosis</th>
-      <td>Name of Diagnosis, Code System Name, Code System Code, Diagnosis Code</td>
+      <td>Name of Diagnosis, Code System Name, Diagnosis Code</td>
       <td>...</td>
    </tr>
    <tr>
@@ -198,7 +198,7 @@ There are two level of details for each claim.
 
 #### Claim Details
 
-The follow is the XML representation:
+The following is the XML representation:
 
 <table>
    <tr>
@@ -306,19 +306,16 @@ The follow is the XML representation:
       <service>
          <name>Name of Service Provided</name>
          <code_system_name>CPT</code_system_name>
-         <code_system>2.16.840.1.113883.6.96</code_system>
          <code>28521</code>
       </service>
       <diagnoses>
          <name>Name of Condition</name>
          <code_system_name>CPT</code_system_name>
-         <code_system>2.16.840.1.113883.6.96</code_system>
          <code>28521</code>
       </diagnoses>
       <diagnoses>
          <name>Name of Condition</name>
          <code_system_name>CPT</code_system_name>
-         <code_system>2.16.840.1.113883.6.96</code_system>
          <code>5854</code>
       </diagnoses>
       <details>
@@ -384,7 +381,47 @@ The follow is the XML representation:
 
 ### Prescription Claims
 
-The follow is the XML representation:
+Claims for prescriptions.
+
+<table>
+   <tr>
+      <th class="table-column">Field</th>
+      <th class="table-column">Description</th>
+      <th class="table-column">Example</th>
+   </tr>
+   <tr>
+      <th>Claim</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Type</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Pharmacy</th>
+      <td>Name, Provider ID, Provider ID Type, Provider Billing Address</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Date</th>
+      <td>...</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Drug</th>
+      <td>Name, Code System Name, Code, Fill Number, Days Supply</td>
+      <td>...</td>
+   </tr>
+   <tr>
+      <th>Prescriber</th>
+      <td>Identifier and Name</td>
+      <td>...</td>
+   </tr>
+</table>
+
+The following is the XML representation:
 
 {% highlight xml %}
     <claims>
