@@ -165,32 +165,32 @@ There are two level of details for each claim.
    </tr>
    <tr>
       <th>Provider Details</th>
-      <td>...</td>
+      <td>Name, Provider ID, Provider ID Type, Provider Billing Address</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Date</th>
-      <td>...</td>
+      <td>Start Date and End Date</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Charges</th>
-      <td>...</td>
+      <td>Price Billed, Insurance Approved, Insurance Paid, Patient Responsibility</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Procedures</th>
-      <td>...</td>
+      <td>Name of Service, Code System Name, Code System Code, Service Code</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Diagnosis</th>
-      <td>...</td>
+      <td>Name of Diagnosis, Code System Name, Code System Code, Diagnosis Code</td>
       <td>...</td>
    </tr>
    <tr>
       <th>Details</th>
-      <td>...</td>
+      <td>See section below.</td>
       <td>...</td>
    </tr>
 </table>
