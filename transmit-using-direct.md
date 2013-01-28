@@ -80,7 +80,7 @@ Sample code: [.NET Reference Implementation](http://wiki.directproject.org/CShar
 
 Learn more: [Direct Project's Documentation Library](http://wiki.directproject.org/Documentation+Library) and [Direct Project's Applicability Statement for Secure Health Transport](http://wiki.directproject.org/Applicability+Statement+for+Secure+Health+Transport)
 
-#### Retrieving Blue Button+ Patient Trust Bundle
+#### Retrieving Blue Button+ Patient Trust Bundle {#bundle}
 Your STA/HISP will need a set of trust anchors in order to transmit Direct messages. The ***Patient*** bundle includes the trust anchors from third party applications in the Blue Button+ ecosystem. The certificate bundle can be retrieved from:
 
 {% highlight text %}

@@ -3,7 +3,7 @@ layout: default
 title: Blue Button Implementation Guide
 ---
 
-# Content Format for Health Records
+# Content Format for Blue Button+ Health Records
 
 An electronic health record keeps a digital record of all clinical information. With the amount of variability in Health IT systems, it is important to have a consistent set of health information for each patient.
 

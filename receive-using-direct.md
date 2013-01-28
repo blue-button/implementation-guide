@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Receiving Blue Button Data Using Direct
+title: Receiving Blue Button+ Data Using Direct
 ---
 
 # Receiving Health Data Using Direct
@@ -16,7 +16,7 @@ Your application will need to integrate with a component that can accept Direct 
 
 When an STA is hosted externally, it is usually by a Health Information Services Provider (HISP). 
 
-For Blue Button, your Direct STA must be able to:
+For Blue Button+, your Direct STA must be able to:
 
 - ***Generate valid Direct addresses*** for your users and use cases.
 - ***Publish certificates*** for its addresses via DNS or LDAP. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
@@ -25,7 +25,7 @@ For Blue Button, your Direct STA must be able to:
 Your application must be able to:
 
 - ***Receive decrypted/validated messages*** from the HISP/STA via its native interface. This interface will vary from component to component.
-- ***Be able to parse and meaningfully represent the Blue Button information*** in a method appropriate for your users and use cases. 
+- ***Be able to parse and meaningfully represent the Blue Button+ information*** in a method appropriate for your users and use cases. 
 
 Sample code: [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
 
@@ -36,13 +36,13 @@ The following diagram depicts a successful transmission. See it [full-size](file
 
 ![Direct Transmit Flow Diagram](images/direct-transmit.png)
 
-## 2. Blue Button Format and Payload
+## 2. Blue Button+ Format and Payload
 
 Once your application has received the message and payload, it needs to process it. It needs to understand what files have been included. It also needs to handle cases where it receives multiple updates from the same user, over a period of time.
 
-As with all Direct messages, Blue Button messages that your application receives from the STA/HISP will be Internet-format Messages following RFC 5322 and Multipart MIME. Blue Button provides additional guidance on the contents of these messages to support a higher level of semantic exchange.
+As with all Direct messages, Blue Button+ messages that your application receives from the STA/HISP will be Internet-format Messages following RFC 5322 and Multipart MIME. Blue Button+ provides additional guidance on the contents of these messages to support a higher level of semantic exchange.
 
-Blue Button messages will contain:
+Blue Button+ messages will contain:
 
 - ***A human-readable message body.*** This body may be in text/plain or text/html format, or (as is common in many mail systems) both of these. The content of the body is up to the sending application, except that it will always begin with the text “This message was sent by *Data Holder Name* at the request of *Patient Name*.” This tag is intended to clarify the context under which information delivery was authorized.
 
@@ -75,10 +75,10 @@ Recurring: Yes
 ## 3. Frequency
 For a given address, there is the likelihood that your application will receive multiple documents over a period of time. This will be especially so, if the consumer sets up an "automated" transmission when ever their health data changes. 
 
-This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button guidelines.
+This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button+ guidelines.
 
-## 4. Blue Button Trust Bundle {#bundle}
-You need to submit the trust anchor for your application to the ***Blue Button Trust Bundle*** in order for a data holder participating in the Blue Button ecosystem to send messages to Direct addresses issued by your application. Follow these steps:
+## 4. Blue Button+ Patient Trust Bundle {#bundle}
+You need to submit the trust anchor for your application to the ***Blue Button+ Trust Bundle*** in order for a data holder participating in the Blue Button+ ecosystem to send messages to Direct addresses issued by your application. Follow these steps:
 
 1. Visit [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org)
 2. Register your application
@@ -90,7 +90,7 @@ Once your application's trust anchor is in the system, it will take 24-48 hours 
 <!--
 
 ## 4. Best Practices for Accepting Direct Messages
-With Blue Button, we are encouraging a secure and open network of health information exchange on behalf of the patient. As a result, if your application becomes widely used, you may want to start using white and black lists to help prioritize and control messages that your application is receiving. You can also do this based on the trust anchors of the certificates used to sign messages that you are receiving.
+With Blue Button+, we are encouraging a secure and open network of health information exchange on behalf of the patient. As a result, if your application becomes widely used, you may want to start using white and black lists to help prioritize and control messages that your application is receiving. You can also do this based on the trust anchors of the certificates used to sign messages that you are receiving.
 -->
 
 <!--
