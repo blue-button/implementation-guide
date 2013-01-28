@@ -59,6 +59,6 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
 	<tr>
 		<th>Transmit: Send on Change</th>
 		<td>-</td>
-		<td>Yes</td>
+		<td><a href="transmit-using-direct.html#triggers">Automation &amp; Triggers</a></td>
 	</tr>
 </table>
