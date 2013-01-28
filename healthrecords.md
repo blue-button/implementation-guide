@@ -5,18 +5,20 @@ title: Blue Button Implementation Guide
 
 # Content Format for Health Records
 
-An electronic health record keeps a digital record of all clinical information. With the amount of variability in Health IT systems, it is important to have a consistent set of health information for each patient. Meaningful Use specifies the fields and content structure of clinical data that patients need to keep about themselves, as they move between provider settings.
+An electronic health record keeps a digital record of all clinical information. With the amount of variability in Health IT systems, it is important to have a consistent set of health information for each patient.
 
 For Blue Button, the recommended standard for representing the patient health record is the [***HL7 Consolidated Clinical Document Architecture***](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=258) also known as the Consolidated CDA.
 
 The Consolidated CDA is a XML-based standard that specifies the encoding, structure, and semantics of a clinical document.
 
-There are a wide-range of templates that can be represented in the Consolidated CDA standard. For Blue Button we are outlining a subset set of sections and fields that should be used.
+There are a wide-range of templates that can be represented in the Consolidated CDA standard. For Blue Button we are outlining a subset of sections and fields that should be used.
 
 ***Tools***: [NIST Validator Web App](http://transport-testing.nist.gov/ttt/) and [C-CDA Scorecard](http://ccda-scorecard.smartplatforms.org/) 
 
 ## 1. Sections
-Blue Button adopts the requirements for sections and fields from Meaningful Use Stage 2. When ever a patient health record is generated, it should have the following fields, if they exist in the dataholders system:
+Blue Button adopts the requirements for sections and fields from Meaningful Use Stage 2. Meaningful Use specifies the fields and content structure of clinical data that providers will share with patients at care transitions.
+
+Whenever the C-CDA is generated for patients, it should have the following fields, if they exist in the dataholder’s system:
 
 <table>
 	<tr>
@@ -104,7 +106,7 @@ Blue Button adopts the requirements for sections and fields from Meaningful Use 
 Link to [Companion Guide to Consolidated CDA](http://wiki.siframework.org/Companion+Guide+to+Consolidated+CDA+for+MU2) produced by ONC.
 
 ## 2. Codes, Dictionaries, and Vocabularies
-Throughout the CCDA there will be a variety of codes used to describe the values within it.
+Throughout the C-CDA there will be a variety of codes used to describe the values within it.
 
 <table>
    <tr>
@@ -136,13 +138,13 @@ Throughout the CCDA there will be a variety of codes used to describe the values
 ## 3. Human Readable Stylesheet
 If a patient or other person is the main consumer of the health record, it should include a stylesheet. 
 
-To make the CCDA XML human readable, an XSLT stylesheet should be included. This will allow a person to easily view their information on a computer or print it.
+To make the C-CDA XML human readable, an XSLT stylesheet should be included. This will allow a person to easily view their information on a computer or print it.
 
 Here is a [sample stylesheet](#).
 
 ## 4. Breakdown of Consolidated CDA XML
 
-This section will dissect a well-formed patient health record. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
+This section will dissect a well-formed patient record C-CDA. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
 
 ### Type of XML File
 
