@@ -11,11 +11,11 @@ This section describes how a consumer can ***download*** a copy of their record 
 
 ## Workflow
 
-As part of View, Download, and Transmit in Meaningful Use Stage 2, a patient must be able to download a copy of their health record. A high-level flow of this is:
+As part of the View, Download, and Transmit requirements in Meaningful Use Stage 2, a patient must be able to download a copy of their health record. A high-level flow of this is:
 
 1. A patient (or their authorized representative) logs into the Patient Portal using previously-validated credentials
 2. Within the portal experience, there is access to functionality that allows them to download a copy of their health record
-3. The download happens over a secure connection like HTTPS
+3. The download happens over a secure connection such as HTTPS
 
 The workflow in this section is meant to be illustrative, not prescriptive.
 

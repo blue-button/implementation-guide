@@ -38,7 +38,7 @@ The following diagram depicts a successful transmission. See it [full-size](file
 
 ## 2. Blue Button+ Format and Payload
 
-Once your application has received the message and payload, it needs to process it. It needs to understand what files have been included. It also needs to handle cases where it receives multiple updates from the same user, over a period of time.
+Once your application has received the message and payload, it needs to process it. It needs to understand what files have been included. It also needs to handle cases in which it receives multiple updates from the same user, over a period of time.
 
 As with all Direct messages, Blue Button+ messages that your application receives from the STA/HISP will be Internet-format Messages following RFC 5322 and Multipart MIME. Blue Button+ provides additional guidance on the contents of these messages to support a higher level of semantic exchange.
 
@@ -73,7 +73,7 @@ Recurring: Yes
 
 
 ## 3. Frequency
-For a given address, there is the likelihood that your application will receive multiple documents over a period of time. This will be especially so, if the consumer sets up an "automated" transmission when ever their health data changes. 
+For a given address, there is the likelihood that your application will receive multiple documents over a period of time. This will be especially so if the consumer sets up an "automated" transmission when ever their health data changes. 
 
 This is beneficial for your application, because it will be getting an up-to-date stream of data. However, your application may need to handle the merging of these transmissions. The means of this merge is up to you as the receiver and not part of Blue Button+ guidelines.
 

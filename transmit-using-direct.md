@@ -16,7 +16,7 @@ Examples of data holder systems include: provider's EHR, health insurance claims
 ### A. Authentication
 A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials.  In the case of a live interaction identity validation may be needed, and can be obtained orally or in writing., If the provider already knows the individual, no additional steps are needed to verify the individual’s identity.
 
-These requirements are the same identity assurance and authentication requirements sufficient for access to the View and Download portions of View, Download, and Transmit in Meaningful Use Stage 2.
+These requirements are the same identity assurance and authentication requirements sufficient to meet the View and Download portions of View, Download, and Transmit requirements in Meaningful Use Stage 2.
 
 See [Blue Button+ Privacy and Security Related Questions](privacy.html) for more guidance.
 
@@ -28,7 +28,7 @@ A patient's request for sharing their data will include:
 2. Frequency preferences
 3. Destination Direct address(es) 
 
-A system must be able to receive these 3 pieces of information from a patient before transmitting their information. These pieces of information may be received via a patient portal or via a provider interface. The patient must also have the ability to revoke a transmit request.
+A system must be able to receive these three pieces of information from a patient before transmitting their information. These pieces of information may be received via a patient portal or via a provider interface. The patient must also have the ability to revoke a transmit request.
 
 #### 1. Authorization 
 Patient access to his or her own health information is a right under the HIPAA Privacy Rule. This request may be made verbally or in writing. The provider may require a written request for access from the patient obtained either as a feature of the patient portal or offline. For auditing purposes, the authorization should be recorded.
@@ -94,7 +94,7 @@ Your STA/HISP will need to sign messages before they are transmitted. Messages c
 
 The preferred path is to use a certificate obtained from a certificate issuer such as a Certificate Authority or HISP that is a member of a trust community within the Direct Project ecosystem (e.g., [Direct Trust](http://directtrust.org)). These communities aggregate trust anchors from those members that issue certificates and publish them within trust anchor bundles.
 
-If you are not participating in one of those communities, then one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
+If you are not participating in one of those communities, one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
 
 For testing, you can upload your anchor to the ***Providers-Test*** [Blue Button+ Trust Bundle](https://secure.bluebuttontrust.org/). For production, you will need to participate in a trust community or sign the message with an EV certificate.
 
@@ -128,7 +128,7 @@ When a transmission occurs, the following should be part of the payload as a mul
 4. Request.txt (Optional)
 
 #### 1. Clinical Summary
-The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history.
+The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history in the EHR.
 
 The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
 
@@ -174,7 +174,7 @@ Recurring: Yes
 
 ### G. Workflow
 
-Storyboards have been drafted to match the key user flows described above: (1) within the patient portal and (2) within the provider's EHR interface.
+The storyboards below match the key user flows described above: (1) within the patient portal and (2) within the provider's EHR interface.
 
 ![Patient Portal](images/transmit-workflow-1.jpg)
 
