@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Receiving Blue Button Data Using the Direct Protocol
+title: Receiving Blue Button Data Using Direct
 ---
 
-# Receiving Health Data Using the Direct Protocol
+# Receiving Health Data Using Direct
 
 This section describes the use of the [Direct Project](http://directproject.org) specification to receive health data securely from a data holder on behalf of a patient or their authorized representative. The ability to receive health data securely enables an ecosystem to be built on patient health data.
 
 ![Receive Diagram](images/receive.png)
 
 ## 1. Using the Direct Protocol to Receive Data
-The Direct Protocol is a specification for how existing standards can be used to securely transport health information over the Internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, authentication of sender and receiver, and confirmation of delivery.
+Direct Project offers a specification for how existing standards can be used to securely transport health information over the Internet. Direct uses SMTP, S/MIME, and X.509 certificates to achieve security, privacy, data integrity, and authentication of sender and receiver sufficient to meet the data transport needs of health information exchange.
 
 Your application will need to integrate with a component that can accept Direct messages and their payloads. This component is called a Security/Trust Agent (STA). A STA uses SMTP and S/MIME to ensure messages and their payload are delivered securely. A STA can be a component internal to your system, or hosted externally. 
 
@@ -18,17 +18,18 @@ When an STA is hosted externally, it is usually by a Health Information Services
 
 For Blue Button, your Direct STA must be able to:
 
-- ***Generate valid Direct addresses*** for your users and use cases. These may be [address-bound or organizationally-bound](http://wiki.directproject.org/Applicability%2BStatement%2Bfor%2BSecure%2BHealth%2BTransport%2BWorking%2BVersion%23x4.0%20Trust%20Verification-4.1%20Verification%20of%20Certificate-Entity%20Binding).
+- ***Generate valid Direct addresses*** for your users and use cases.
 - ***Publish certificates*** for its addresses via DNS or LDAP. If the addresses are patient-controlled, you must assign an ***individual certificate*** to each.
 - ***Verify incoming messages*** to ensure they are proper Direct message and that they have been signed by an appropriate certificate from a trust community or an extended validation (EV) certificate. These ***Provider*** anchors can be found at [https://secure.bluebuttontrust.org](https://secure.bluebuttontrust.org).
-- ***Handle errors*** according to the applicability statement.
 
 Your application must be able to:
 
 - ***Receive decrypted/validated messages*** from the HISP/STA via its native interface. This interface will vary from component to component.
 - ***Be able to parse and meaningfully represent the Blue Button information*** in a method appropriate for your users and use cases. 
 
-See [Direct Protocol Documentation](http://wiki.directproject.org/Documentation+Library), [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
+Sample code: [.NET Reference Implementation](http://wiki.directproject.org/CSharp+Reference+Implementation), and [Java Reference Implementation](http://wiki.directproject.org/Java+Reference+Implementation).
+
+Learn more: [Direct Project's Documentation Library](http://wiki.directproject.org/Documentation+Library) and [Direct Project's Applicability Statement for Secure Health Transport](http://wiki.directproject.org/Applicability+Statement+for+Secure+Health+Transport)
 
 #### Detailed Flow Diagram
 The following diagram depicts a successful transmission. See it [full-size](files/patient-transmit.pdf).
