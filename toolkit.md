@@ -13,7 +13,7 @@ There are quite a few resources availiable to help help you adopt the different 
 - [Smart Platforms C-CDA Scorecard](http://ccda-scorecard.smartplatforms.org/)
 - [NIST Validator Web App](http://transport-testing.nist.gov/ttt/)
 
-### Direct
+***Direct***
 - [Direct Project Wiki](http://wiki.directproject.org/)
 - [Direct Project's Documentation Library](http://wiki.directproject.org/Documentation+Library)
 - [Direct Project's Applicability Statement for Secure Health Transport](http://wiki.directproject.org/Applicability+Statement+for+Secure+Health+Transport)
