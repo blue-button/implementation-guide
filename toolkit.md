@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Blue Button Implementation Guide - Toolkit
+title: Blue Button Implementation Guide
 ---
 
-# Helpful Blue Button+ Tools
+# Helpful Blue Button+ Resources
 
 There are quite a few resources availiable to help help you adopt the different components of Blue Button+.
 
