@@ -140,7 +140,7 @@ Depending on the trigger or type of encounter, it may also be appropriate to inc
 
 The payload may include other documents as well.
 
-#### 3. Transmit Context
+#### 3. Transmit Context {#context}
 The message body should also include attribution that this transmission was on behalf of the patient in text/plain or text/html:
 
 {% highlight text %}

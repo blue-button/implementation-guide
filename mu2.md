@@ -62,3 +62,32 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
 		<td><a href="transmit-using-direct.html#triggers">Automation &amp; Triggers</a></td>
 	</tr>
 </table>
+
+## Key Differences
+
+### Trust Anchors: Blue Button Trust Bundle
+
+Manually installing anchors is not a scalable way to ensure exchange among a ecosystem happens. The Blue Button+ community has assembled a collection of anchors of third party applications and services. This anchor bundle is at [http://secure.bluebuttontrust.org](http://secure.bluebuttontrust.org).
+
+Members of the Blue Button+ community have updated the [.NET](http://wiki.directproject.org/CSharp+Reference+Implementation) and [Java](http://wiki.directproject.org/Java+Reference+Implementation) reference implementations of Direct to include automated bundle retrieval functionality.
+
+So if you are using one of the Direct reference implementations, retrieving the Blue Button Trust Bundle is as simple as updating a configuration file.
+
+Learn more in the <a href="transmit-using-direct.html#bundle">Transmit</a> section.
+
+### Transmit Context: Message Body & Request.txt
+
+This is a simple addition to the message body to distinguish the type of transfer that is happening. The message indicates that it is a patient mediated transfer.
+
+There is also an optional Request.txt that can be attached.
+
+Learn more in the <a href="transmit-using-direct.html#context">Transmit</a> section.
+
+### Transmit: Send on Change (Automation)
+
+Blue Button+ aims to encourage a health ecosystem of patient-centric applications. In order to do that, data needs to easily get from providers to third party applications. That is achieved using Direct.
+
+Automation is a key component because it enables data to flow to applications seamlessly. A patient can initiate a transmit and request it to be resent whenever data is changed.
+
+Learn more about <a href="transmit-using-direct.html#triggers">Automations and Triggers</a>.
+
