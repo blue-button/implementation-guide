@@ -128,7 +128,7 @@ When a transmission occurs, the following should be part of the payload as a mul
 4. Request.txt (Optional)
 
 #### 1. Clinical Summary
-The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history in the EHR.
+The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is a snapshot of a patient's health history in the EHR.
 
 The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
 
