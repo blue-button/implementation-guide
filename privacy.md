@@ -5,7 +5,7 @@ title: Best Practices for Transmitting Data
 
 # Privacy and Security
 
-The U.S. Department of Health and Human Services’ Office for Civil Rights and Office of the National Coordinator have compiled the following document from existing policy guidance, in response to questions related to the Automate Blue Button Initiative. This document will be periodically expanded upon, as more questions arise that we can address with existing guidance. 
+The U.S. Department of Health and Human Services’ Office for Civil Rights and Office of the National Coordinator have compiled the following document in response to questions related to the Automate Blue Button Initiative. This document will be periodically expanded upon, as more questions arise that we can address with existing guidance. 
 
 ##Background
 
@@ -61,6 +61,6 @@ Yes.  Covered entities (including health care providers) are permitted to requir
 A covered entity is not responsible for safeguarding e-PHI once it has been delivered to the destination designated by the individual. 
 
 
-***(Not in use case, but requested) - Does an individual have a right of access to claims and other payment information about the individual maintained by a health plan?***
+***Not in use case, but relevant for health plans: - Does an individual have a right of access to claims and other payment information about the individual maintained by a health plan?***
 
 An individual’s right of access  applies to the PHI that is maintained in a covered entity’s designated record set(s).  With respect to health plans, a designated record set includes the health plan’s enrollment, payment, claims adjudication, and case or medical management record systems, as well as any records used in whole or in part by or for the health plan to make decisions about the individual.  A record is any item, collection, or grouping of information that includes PHI that is maintained, collected, used or disseminated by or for the covered entity.  See 45 C.F.R. 164.501 (definition of “designated record set”).
