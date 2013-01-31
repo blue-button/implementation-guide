@@ -67,7 +67,7 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
 
 ### Trust Anchors: Blue Button Trust Bundle
 
-Manually installing anchors is not a scalable way to ensure exchange among a ecosystem happens. The Blue Button+ community has assembled a collection of anchors of third party applications and services. This anchor bundle is at [http://secure.bluebuttontrust.org](http://secure.bluebuttontrust.org).
+Manually installing anchors is not a scalable way to ensure scalable exchange using Direct. The Blue Button+ community has assembled a collection of anchors of third party applications and services. This anchor bundle is at [http://secure.bluebuttontrust.org](http://secure.bluebuttontrust.org).
 
 Members of the Blue Button+ community have updated the [.NET](http://wiki.directproject.org/CSharp+Reference+Implementation) and [Java](http://wiki.directproject.org/Java+Reference+Implementation) reference implementations of Direct to include automated bundle retrieval functionality.
 

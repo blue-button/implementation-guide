@@ -25,7 +25,7 @@ The workflow in this section is meant to be illustrative, not prescriptive.
 The patient needs to be able to download a package that is human-readable and machine-readable.
 
 ### Required for MU 2
-The required content for ***download*** will be the [***Clinical Summary***](healthrecords.html), which is the entire patient's health history. The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml.
+The required content for ***download*** will be the [***Clinical Summary***](healthrecords.html), which is a snapshot of the patient’s health history. The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml.
 
 If the data holder has not yet implemented Meaningful Use  Stage 2 certified electronic health record technology (CEHRT), they may alternatively use the data elements and format required by Meaningful Use Stage 1 for a Continuity of Care Document / C32.
 

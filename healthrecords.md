@@ -144,7 +144,7 @@ Here is a [sample stylesheet](#).
 
 ## 4. Breakdown of Consolidated CDA XML
 
-This section dissects a well-formed patient record C-CDA. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
+This section dissects a well-formed C-CDA. This is the [entire XML file](files/CCDA_CCD_b1_Ambulatory_v2.xml). This is [another example](files/CCDA_CCD_b1_InPatient_v2).
 
 ### Type of XML File
 

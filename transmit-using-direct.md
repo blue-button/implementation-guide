@@ -14,7 +14,7 @@ Examples of data holder systems include: provider's EHR, health insurance claims
 ## 1. Technical
 
 ### A. Authentication
-A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials.  In the case of a live interaction identity validation may be needed, and can be obtained orally or in writing., If the provider already knows the individual, no additional steps are needed to verify the individual’s identity.
+A patient's identity must be validated before a transmission of his/her data can occur. In the case of a patient portal, a patient or their authorized representative is authenticated by logging in using previously-validated credentials.  In the case of a live interaction identity validation may be needed, and can be obtained orally or in writing. If the provider already knows the individual, no additional steps are needed to verify the individual’s identity. (Also see [Blue Button Privacy and Security Related Questions](privacy.html))
 
 These requirements are the same identity assurance and authentication requirements sufficient to meet the View and Download portions of View, Download, and Transmit requirements in Meaningful Use Stage 2.
 
@@ -63,16 +63,16 @@ As a data holder, you will need to send patient health information from your sys
 
 When an STA is hosted externally, it is usually by a Health Information Services Provider (HISP).
 
-A STA following Stage Two guidance should be able to:
+A STA/HISP certified for Meaningful Use Stage 2 should be able to:
 - ***Send***: A message and its payload must be sent via SMTP
 - ***Encrypt***: Messages will be encrypted using S/MIME
 - ***Use Encryption Certificates***: A STA must discover certificates via DNS or LDAP to encrypt messages (See Section 5 of the [Direct Applicability Statement](http://wiki.directproject.org/Applicability+Statement+for+Secure+Health+Transport+Working+Version))
 - ***Validate Certificates***: Confirm the Certificates are current, valid and Direct-compliant (See Section 4 of the [Direct Applicability Statement](http://wiki.directproject.org/Applicability+Statement+for+Secure+Health+Transport+Working+Version))
+- ***Sign Messages w. Certificate***: Outbound messages should be [signed by a certificate](#certificates).
 
 Blue Button+ requires the STA to be configured to:
 
 - ***Retrieve Trust Anchor Bundle***: A STA should automatically retrieve the latest Blue Button+ trust bundle
-- ***Sign Messages w. Certificate***: Outbound messages should be [signed by a certificate](#certificates).
 
 Your system will communicate the payload and destination Direct address to a STA/HISP. It will most likely be via REST or SOAP, but this can differ from system to system.
 
@@ -92,7 +92,7 @@ The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle sh
 #### Signing with a Certificate {#certificates}
 Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. 
 
-The preferred path is to use a certificate obtained from a certificate issuer such as a Certificate Authority or HISP that is a member of a trust community within the Direct Project ecosystem (e.g., [Direct Trust](http://directtrust.org)). These communities aggregate trust anchors from those members that issue certificates and publish them within trust anchor bundles.
+The preferred path for STAs/HISPs serving providers is to participate in a trust community such as [Direct Trust](http://directtrust.org)). These communities aggregate trust anchors from those members that issue certificates and publish them within trust anchor bundles.
 
 If you are not participating in one of those communities, one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
 
@@ -130,7 +130,7 @@ When a transmission occurs, the following should be part of the payload as a mul
 #### 1. Clinical Summary
 The primary content of the transmission will be the [***Clinical Summary***](healthrecords.html), which is a snapshot of a patient's health history in the EHR.
 
-The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet adopted MU Stage 2, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
+The content format shall use the [Consolidated CDA w. Meaningful Use Stage 2 Sections and Fields](healthrecords.html) and have a MIME type of application/xml. If the data holder has not yet implemented MU Stage 2 CEHRT, they may alternatively use the data elements and format required by MU Stage 1 for a Continuity of Care Document / C32.
 
 #### 2. Additional Documents
 Depending on the trigger or type of encounter, it may also be appropriate to include one of the following:
@@ -154,7 +154,7 @@ This message was sent by Ashby Medical Center at the request of Ellen Ross.
 {% endhighlight %}
 
 #### 4. Request.txt (Optional)
-In addition to the friendly message in the body, you should include a ***request.txt***. This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
+In addition to the friendly message in the body, you may also include a ***request.txt*** (Optional). This is a simple way, much like [robots.txt](http://www.robotstxt.org/robotstxt.html) works to provide some semi-structured context to machines.
 
 {% highlight text %}
 Destination: [Direct Address]
