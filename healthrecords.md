@@ -39,7 +39,7 @@ Whenever the C-CDA is generated for patients, it should have the following field
 	<tr>
 		<th>Encounters</th>
 		<td>Surgeries, ED visits, etc.</td>
-		<td><a href="#encouters">Jump to XML</a></td>
+		<td><a href="#encounters">Jump to XML</a></td>
 	</tr>
 	<tr class="odd">
 		<th>Immunizations</th>
