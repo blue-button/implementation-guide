@@ -43,11 +43,13 @@ As a practical matter, requiring that such requests be in writing may reduce err
 
 Yes. The Privacy Rule requires covered entities (including health care providers) to provide access to the PHI in the form or format requested by the individual if it is readily producible in such form or format. See 45 C.F.R. § 164.524(c)(2).
 
+<!--
 ***4.	What are the implications for breach notification if a health care provider transmits Blue Button health information to an individual in accordance with the Direct exchange specifications, which require encrypting with at least one algorithm endorsed by FIPS 140-2?***
 
-PHI in transit that has been rendered unusable, unreadable or indecipherable in compliance with encryption processes that are Federal Information Processing Standards (FIPS) 140-2 validated meets the safe harbor provision of the Breach Notification Rule so long as the confidential process or key that might enable decryption has not been breached. See Federal Register, volume 74, page 42742 (August 24, 2009).  This means that information that is transmitted in accordance with the Direct exchange specifications (where the decryption key or process has not been breached) would be considered to meet the safe harbor provision of the Breach Notification Rule.
+PHI in transit that has been rendered unusable, unreadable or indecipherable in compliance with encryption processes that are Federal Information Processing Standards (FIPS) 140-2 validated meets the safe harbor provision of the Breach Notification Rule so long as the confidential process or key that might enable decryption has not been breached. See Federal Register, volume 74, page 42742 (August 24, 2009).  This means that information that is transmitted in accordance with the Direct exchange specifications (where the decryption key or process has not been breached) would be considered to meet the safe harbor provision of the Breach Notification Rule. 
+-->
 
-***5.	If an individual requests that a provider transmit their Blue Button health information via unencrypted e-mail, may the provider do so?***
+***4.	If an individual requests that a provider transmit their Blue Button health information via unencrypted e-mail, may the provider do so?***
 
 In e-mailing PHI to individuals, covered entities (including health care providers) are required to comply with the HIPAA Security Rule, which, among other requirements, requires implementation of technical security measures to guard against unauthorized access to e-PHI  that is being transmitted over an electronic communications network.  See  45 CFR 164.312(e).   The Security Rule requires encryption when transmitting e- PHI where it is reasonable and appropriate to encrypt the information, and in general, encryption is a reasonable and appropriate measure to safeguard the e-PHI in e-mail transmissions.  However, there may be instances where an individual may not want to receive his or her e-PHI  encrypted.  In these cases, covered entities are permitted to send e-PHI to individuals through unencrypted e-mails if they have advised the individual of the risk, and after doing so, the individual still requests that his or her e-PHI be sent through unencrypted e-mail.  
 
@@ -56,7 +58,7 @@ In e-mailing PHI to individuals, covered entities (including health care provide
 
 Yes.  Covered entities (including health care providers) are permitted to require that individuals make access requests in writing, which may include documentation of an individual’s wish to receive his or her e-PHI via unencrypted e-mail even though the individual has been advised of the risks.  
 
-***6.	Is a provider responsible for the security of Blue Button health information under the HIPAA Rules once it has been received by the individual?***
+***5.	Is a provider responsible for the security of Blue Button health information under the HIPAA Rules once it has been received by the individual?***
 
 A covered entity is not responsible for safeguarding e-PHI once it has been delivered to the destination designated by the individual. 
 
