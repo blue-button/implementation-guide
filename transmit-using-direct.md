@@ -92,7 +92,7 @@ The bundle format is ***PKCS7*** which has a ***.p7b*** extension. The bundle sh
 #### Signing with a Certificate {#certificates}
 Your STA/HISP will need to sign messages before they are transmitted. Messages can be signed by multiple certificates. 
 
-The preferred path for STAs/HISPs serving providers is to participate in a trust community such as [Direct Trust](http://directtrust.org). These communities aggregate trust anchors from those members that issue certificates and publish them within trust anchor bundles.
+The preferred path for STAs/HISPs serving providers is to participate in a trust community such as [Direct Trust](http://directtrust.org). These communities aggregate trust anchors from those members that issue certificates and publish them within trust anchor bundles. These anchor bundles will facilitate both Transitions of Care (ToC) and View, Download, and Transmit (VDT) workflows in MU 2.
 
 If you are not participating in one of those communities, one of the signing certificates must be an extended validation (EV) certificate from a reputable vendor.
 
