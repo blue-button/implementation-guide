@@ -317,6 +317,14 @@ td{
 	border-left: 1px solid #e8eef2;
 }
 
+.status-good{
+	color: #8bc541;
+}
+
+.status-bad{
+	color: #c3423a;
+}
+
 .table-column{
 	border-left: 1px solid #e8eef2;
 	background: #696969;
