@@ -14,7 +14,7 @@ Be sure to select Patients-Test and/or Providers-Test when registering.
 
 2. Visit http://sitenv.org/web/sit/direct-transport/
 
-3. Use the SITE platform Receive section by entering the recipient DIRECT address for a user on your app (e.g. testuser@direct.yourapp.org)
+3. Use the SITE platform "Receive" section by entering the recipient DIRECT address for a user on your app (e.g. testuser@direct.yourapp.org)
 	 
 	You can **select your own content** (C-CDA). We recommend using:
 	- [SMART's Sample C-CDAs](https://github.com/chb/sample_ccdas) or
@@ -33,4 +33,4 @@ For general support, questions or feedback use the [FAQ](http://forum.sitenv.org
 
 If you are still having technical difficulties using the SITE tools or services contact the admin help desk at [admin@sitenv.org](mailto:admin@sitenv.org)
 
-For any Blue Button or Blue Button+ inquiries reach out to [Rebecca.Mitchell@hhs.gov](mailto:rebecca.mitchell@hhs.gov) 
+For any Blue Button or Blue Button+ inquiries reach out to [rebecca.mitchell@hhs.gov](mailto:rebecca.mitchell@hhs.gov) 
