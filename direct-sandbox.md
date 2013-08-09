@@ -33,4 +33,4 @@ For general support, questions or feedback use the [FAQ](http://forum.sitenv.org
 
 If you are still having technical difficulties using the SITE tools or services contact the admin help desk at [admin@sitenv.org](mailto:admin@sitenv.org)
 
-For any Blue Button or Blue Button+ inquiries reach out to [Rebecca.Mitchell@hhs.gov](mailto:Rebecca.Mitchell@hhs.gov) 
+For any Blue Button or Blue Button+ inquiries reach out to [Rebecca.Mitchell@hhs.gov](mailto:rebecca.mitchell@hhs.gov) 
