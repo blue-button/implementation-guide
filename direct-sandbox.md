@@ -23,7 +23,7 @@ Be sure to select Patients-Test and/or Providers-Test when registering.
 If you **use your own C-CDAs**, please run them through the [SMART C-CDA Scorecard](http://ccda-scorecard.smartplatforms.org) to ensure that your C-CDAs are following best practices.
 
 Or you can choose **built-in content from SITE** via the "Pick Sample" dropdown. 
-![Sandbox Dropdown](images/sandbox-dropdown.png)
+![Sandbox Dropdown](mages/sandbox-dropdown.png)
 
 4. A message will be sent to the address provided.
 
