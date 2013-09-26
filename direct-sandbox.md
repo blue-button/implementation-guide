@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Testing Your DIRECT Instance
+published: true
 ---
 
 # Testing Your DIRECT Instance
@@ -18,7 +19,7 @@ Be sure to select Patients-Test and/or Providers-Test when registering.
 	 
 	You can **select your own content** (C-CDA). We recommend using:
 	- [SMART's Sample C-CDAs](https://github.com/chb/sample_ccdas) or
-	- EMERGE's synthetic samples. (coming soon) 
+	- [EMERGE's synthetic samples.](https://github.com/jmandel/sample_ccdas/tree/master/EMERGE)
 
 If you **use your own C-CDAs**, please run them through the [SMART C-CDA Scorecard](http://ccda-scorecard.smartplatforms.org) to ensure that your C-CDAs are following best practices.
 
@@ -33,4 +34,4 @@ For general support, questions or feedback use the [FAQ](http://forum.sitenv.org
 
 If you are still having technical difficulties using the SITE tools or services contact the admin help desk at [admin@sitenv.org](mailto:admin@sitenv.org)
 
-For any Blue Button or Blue Button+ inquiries reach out to [rebecca.mitchell@hhs.gov](mailto:rebecca.mitchell@hhs.gov) 
+For any Blue Button or Blue Button+ inquiries reach out to [rebecca.mitchell@hhs.gov](mailto:rebecca.mitchell@hhs.gov)
