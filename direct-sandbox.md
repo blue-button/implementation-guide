@@ -19,7 +19,7 @@ Be sure to select Patients-Test and/or Providers-Test when registering.
 	 
 	You can **select your own content** (C-CDA). We recommend using:
 	- [SMART's Sample C-CDAs](https://github.com/chb/sample_ccdas) or
-	- [EMERGE's synthetic samples.](https://github.com/jmandel/sample_ccdas/tree/master/EMERGE)
+	- [EMERGE's synthetic samples.](https://github.com/chb/sample_ccdas/tree/master/EMERGE)
 
 If you **use your own C-CDAs**, please run them through the [SMART C-CDA Scorecard](http://ccda-scorecard.smartplatforms.org) to ensure that your C-CDAs are following best practices.
 
