@@ -44,7 +44,7 @@ Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-resea
 		<th class="table-column">Specified in MU 2 VDT</th>
 		<th class="table-column">Specified for Blue Button+</th>
 	</tr>
-     <tr class="odd">
+	<tr class="odd">
 		<th>View</th>
 		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
 		<td>Yes</td>
