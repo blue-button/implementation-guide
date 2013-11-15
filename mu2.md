@@ -6,65 +6,9 @@ published: true
 
 # V/D/T and Blue Button+
 
-As a dataholder, by implementing Blue Button+, you will be meeting the requirements of View, Download, and Transmit (V/D/T) in Meaningful Use Stage 2.
+As a dataholder, by implementing Blue Button+ Direct, you will be meeting the requirements of View, Download, and Transmit (V/D/T) in Meaningful Use Stage 2.
 
-Blue Button+ gives specific guidance to dataholders in meeting the V/D/T requirements. In doing so, it describes a few minor clarifications and additions to V/D/T that ensures patients can transmit their records to third party applications of their choice.
-
-
-<table>
-	<tr>
-		<th class="table-column">Requirements</th>
-		<th class="table-column">Specified in MU 2 VDT</th>
-		<th class="table-column">Specified for Blue Button+</th>
-	</tr>
-	<tr>
-		<th>Structure</th>
-		<td><a href="healthrecords.html">Consolidated CDA</a></td>
-		<td><a href="healthrecords.html">Consolidated CDA</a></td>
-	</tr>
-	<tr class="odd">
-		<th>Section &amp; Fields</th>
-		<td><a href="healthrecords.html">Sections and fields described in MU 2</a></td>
-		<td><a href="healthrecords.html">Sections and fields described in MU 2</a></td>
-	</tr>
-	<tr>
-		<th>Transmit</th>
-		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
-		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
-	</tr>
-	<tr class="odd">
-		<th>Trust Anchors</th>
-		<td>Manual Anchor Exchange</td>
-		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
-	</tr>
-	<tr>
-		<th>Certificate Discovery</th>
-		<td>Via DNS or LDAP</td>
-		<td>Via DNS or LDAP</td>
-	</tr>
-	<tr class="odd">
-		<th>Transmit Context</th>
-		<td>-</td>
-		<td>In message body and optional Request.txt</td>
-	</tr>	
-	<tr>
-		<th>Download</th>
-		<td>Yes</td>
-		<td>Yes</td>
-	</tr>
-	<tr class="odd">
-		<th>Transmit: Send Once</th>
-		<td>Yes</td>
-		<td>Yes</td>
-	</tr>
-	<tr>
-		<th>Transmit: Send on Change</th>
-		<td>-</td>
-		<td><a href="transmit-using-direct.html#triggers">Automation &amp; Triggers</a></td>
-	</tr>
-</table>
-
-## The Specifics
+Blue Button+ Direct specifications ask data holders to meet V/D/T requirements, and offers guidance for a few minor clarifications and additions to V/D/T that ensure patients can easily transmit their records to third party applications of their choice.
 
 ###Patient engagement.
 
@@ -92,7 +36,65 @@ Blue Button+ gives specific guidance to dataholders in meeting the V/D/T require
     
 	(2) Inpatient setting only. Electronically transmit transition of care/referral summaries (as a result of a transition of care/referral) selected by the patient (or their authorized representative) in accordance with the standard specified in §170.202(a).
 
-Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-researchers-implementers/meaningful-use-stage-2">HealthIT.gov</a>
+Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-researchers-implementers/meaningful-use-stage-2" target="_blank">HealthIT.gov</a>. And view the final ONC rule <a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf" target="_blank">here</a>.
+
+<table>
+	<tr>
+		<th class="table-column">Requirements</th>
+		<th class="table-column">Specified in MU 2 VDT</th>
+		<th class="table-column">Specified for Blue Button+</th>
+	</tr>
+	<tr>
+		<th>Content</th>
+		<td><a href="healthrecords.html">Consolidated CDA</a></td>
+		<td><a href="healthrecords.html">Consolidated CDA</a></td>
+	</tr>
+	<tr class="odd">
+		<th>Section &amp; Fields</th>
+		<td><a href="healthrecords.html">Sections and fields described in MU 2</a></td>
+		<td><a href="healthrecords.html">Sections and fields described in MU 2</a></td>
+	</tr>
+	<tr>
+		<th>Transmit</th>
+		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
+		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
+	</tr>
+	<tr class="odd">
+		<th>Trust Anchors</th>
+		<td>Manual Anchor Exchange</td>
+		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
+	</tr>
+	<tr class="odd">
+		<th>Certificate Discovery</th>
+		<td>Via DNS or LDAP</td>
+		<td>Via DNS or LDAP</td>
+	</tr>
+	<tr>
+		<th>Transmit Context</th>
+		<td>-</td>
+		<td>In message body and optional Request.txt</td>
+	</tr>	
+    <tr class="odd">
+		<th>View</th>
+		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th>Download</th>
+		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
+		<td>Yes</td>
+	</tr>
+	<tr class="odd">
+		<th>Transmit: Send Once</th>
+		<td>Yes</td>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th>Transmit: Send on Change</th>
+		<td>-</td>
+		<td><a href="transmit-using-direct.html#triggers">Automation &amp; Triggers</a></td>
+	</tr>
+</table>
 
 ## Key Differences
 
