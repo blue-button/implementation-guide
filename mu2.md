@@ -44,6 +44,21 @@ Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-resea
 		<th class="table-column">Specified in MU 2 VDT</th>
 		<th class="table-column">Specified for Blue Button+</th>
 	</tr>
+     <tr class="odd">
+		<th>View</th>
+		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th>Download</th>
+		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
+		<td>Yes</td>
+	</tr>
+	<tr class="odd">
+		<th>Transmit</th>
+		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
+		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
+	</tr>
 	<tr>
 		<th>Content</th>
 		<td><a href="healthrecords.html">Consolidated CDA</a></td>
@@ -55,11 +70,6 @@ Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-resea
 		<td><a href="healthrecords.html">Sections and fields described in MU 2</a></td>
 	</tr>
 	<tr>
-		<th>Transmit</th>
-		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
-		<td><a href="transmit-using-direct.html">Direct Protocol (SMIME/SMTP)</a></td>
-	</tr>
-	<tr class="odd">
 		<th>Trust Anchors</th>
 		<td>Manual Anchor Exchange</td>
 		<td><a href="https://secure.bluebuttontrust.org" target="_blank">Blue Button Trust Bundle</a></td>
@@ -74,16 +84,6 @@ Learn more about Meaningful Use at <a href="http://www.healthit.gov/policy-resea
 		<td>-</td>
 		<td>In message body and optional Request.txt</td>
 	</tr>	
-    <tr class="odd">
-		<th>View</th>
-		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
-		<td>Yes</td>
-	</tr>
-	<tr>
-		<th>Download</th>
-		<td><a href="http://www.gpo.gov/fdsys/pkg/FR-2012-09-04/pdf/2012-20982.pdf#page=128" target="_blank">Yes</a></td>
-		<td>Yes</td>
-	</tr>
 	<tr class="odd">
 		<th>Transmit: Send Once</th>
 		<td>Yes</td>
