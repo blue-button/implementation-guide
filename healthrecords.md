@@ -140,7 +140,8 @@ If a patient or other person is the main consumer of the health record, it shoul
 
 To make the C-CDA XML human readable, an XSLT stylesheet should be included. This will allow a person to easily view their information on a computer or print it.
 
-Here is a [sample stylesheet](#).
+<!-- TODO: Find a sample stylesheet? -->
+<!-- Here is a [sample stylesheet](#). -->
 
 ## 4. Breakdown of Consolidated CDA XML
 
