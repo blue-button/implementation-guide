@@ -90,6 +90,7 @@ Further detail on formats for Blue Button+ is available on [http://wiki.siframew
 ## Security Considerations:
 
 HL7 CDA security issues have come to light in certain implementations.  Maliciously-crafted documents can lead to vulnerabilities and exploits in the HTML portions of the CDA document, particularly if using the C-CDA display using HL7 style sheets.  See important post from Dr. Joshua Mandel from Harvard for more detail:
+
 [http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/](http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/)
 
 also Graham Grieve has helped summarize these issues:
