@@ -86,3 +86,18 @@ Additional proprietary or closed data exchange formats and platforms also exist 
 
 Further detail on formats for Blue Button+ is available on [http://wiki.siframework.org/ABBI+Payor+Content+Interim+Guidance](http://wiki.siframework.org/ABBI+Payor+Content+Interim+Guidance).
 
+
+## Security Considerations:
+
+HL7 CDA security issues have come to light in certain implementations.  Maliciously-crafted documents can lead to vulnerabilities and exploits in the HTML portions of the CDA document, particularly if using the C-CDA display using HL7 style sheets.  See important post from Dr. Joshua Mandel from Harvard for more detail:
+[http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/](http://smartplatforms.org/2014/04/security-vulnerabilities-in-ccda-display/)
+
+also Graham Grieve has helped summarize these issues:
+1. Unsanitized nonXMLBody/text/reference/@value can execute JavaScript
+2. Unsanitized table/@onmouseover can execute JavaScript
+3. Unsanitized observationMedia/value/reference/@value can leak state via HTTP Referer headers
+
+HL7 FHIR, I would suggest, may be less vulnerable to these types of attacks.  This standard not only has the feature set described in the Interim Guidance, but also several important protective features, namely that FHIR already includes native HTML, and active content is not allowed.  Other information, including Graham Grieve's post on white-listing external references and imaging, are detailed here:
+
+[http://www.healthintersections.com.au/?p=2000](http://www.healthintersections.com.au/?p=2000)
+
